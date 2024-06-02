@@ -17,6 +17,7 @@ namespace OopLabProje
 {
     public partial class MainForm : Form
     {
+        private List<string> notes; // A list for taking notes  akyldrmbyznr
         public MainForm()
         {
             InitializeComponent();
@@ -37,6 +38,10 @@ namespace OopLabProje
             CheckSaveDirectory();
             string path = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "OopLabProje", "Contacts.txt");
             LoadContactsFromFile(path);
+
+            //Notes 
+            notes = new List<string>();   //akyldrmbyznr
+            LoadNotesFromFile();          //akyldrmbyznr
         }
 
         //Seperate into classes
@@ -374,9 +379,102 @@ namespace OopLabProje
                 }
             }
         }
+        // akyldrmbyznr codes of notes section
+        private void LoadNotesFromFile()     // This method reads the notes from the file and loads them into the notes list in memory.
+        {
+            string path = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "OopLabProje", "notes.csv");
+            if (File.Exists(path))
+            {
+                using (StreamReader reader = new StreamReader(path))
+                {
+                    while (!reader.EndOfStream)
+                    {
+                        string line = reader.ReadLine();
+                        notes.Add(line);
+                    }
+                }
+            }
+        }
+        private void SaveNotesToFile() // this metod saves the notes.
+        {
+            string path = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "OopLabProje", "notes.csv");
+            using (StreamWriter writer = new StreamWriter(path))
+            {
+                foreach (var note in notes)
+                {
+                    writer.WriteLine(note);
+                }
+            }
+        }
+        private void RefreshNotes() //this method is a method used to update the notes list (ListBox) and save the changes to the file that use SaveNotesToFile metod.
+        {
+            listBoxNotes.Items.Clear();
+            foreach (var note in notes)
+            {
+                listBoxNotes.Items.Add(note);
+            }
+
+            SaveNotesToFile();
+        }
+
+        private void btnAddNote_Click(object sender, EventArgs e) // this method adds a new note to the list.
+        {
+            if (string.IsNullOrWhiteSpace(textBoxNoteContent.Text))
+            {
+                MessageBox.Show("Lütfen bir not girin.");
+                return;
+            }
+
+            notes.Add(textBoxNoteContent.Text);
+            textBoxNoteContent.Clear();
+            RefreshNotes();
+        }
+
+        private void btnUpdateNote_Click(object sender, EventArgs e) // this method updates the selected note.
+        {
+            if (listBoxNotes.SelectedIndex == -1)
+            {
+                MessageBox.Show("Lütfen güncellemek için bir not seçin.");
+                return;
+            }
+
+            if (string.IsNullOrWhiteSpace(textBoxNoteContent.Text))
+            {
+                MessageBox.Show("Not içeriği boş olamaz.");
+                return;
+            }
+
+            notes[listBoxNotes.SelectedIndex] = textBoxNoteContent.Text;
+            textBoxNoteContent.Clear();
+            RefreshNotes();
+        }
+
+        private void btnDeleteNote_Click(object sender, EventArgs e) //this method delete the selected notes.
+        {
+            if (listBoxNotes.SelectedIndex == -1)
+            {
+                MessageBox.Show("Lütfen silmek için bir not seçin.");
+                return;
+            }
+
+            notes.RemoveAt(listBoxNotes.SelectedIndex);
+            textBoxNoteContent.Clear();
+            RefreshNotes();
+        }
 
 
+        private void listBoxNotes_SelectedIndexChanged(object sender, EventArgs e) //When an item is selected in listBoxNotes, it checks the selected item.
+        {                                                                          //If an item is selected, it retrieves the selected item from the notes list 
+            if (listBoxNotes.SelectedIndex != -1)                                  //and writes it into the textBoxNoteContent text box.
+            {
+                textBoxNoteContent.Text = notes[listBoxNotes.SelectedIndex];
+            }
+        }
 
+        private void btnListNote_Click(object sender, EventArgs e) // this method lists all notes. 
+        {
+            RefreshNotes();
+        }
     }
-
+    // akyldrmbyznr The codes for the notes section are finished.
 }
