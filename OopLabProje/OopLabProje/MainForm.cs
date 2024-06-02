@@ -18,6 +18,7 @@ namespace OopLabProje
     public partial class MainForm : Form
     {
         private List<string> notes; // A list for taking notes  akyldrmbyznr
+        private List<Reminder> reminders; // for reminder  akyldrmbyznr 
         public MainForm()
         {
             InitializeComponent();
@@ -42,6 +43,11 @@ namespace OopLabProje
             //Notes 
             notes = new List<string>();   //akyldrmbyznr
             LoadNotesFromFile();          //akyldrmbyznr
+
+            comboBoxReminderType.DataSource = Enum.GetValues(typeof(ReminderType));
+
+            reminders = new List<Reminder>();
+            LoadRemindersFromFile();
         }
 
         //Seperate into classes
@@ -236,7 +242,7 @@ namespace OopLabProje
             DeleteContact(tempContact);
         }
 
-        void DeleteContact(Contact contact) 
+        void DeleteContact(Contact contact)
         {
 
             // Specify the email address to delete
@@ -475,6 +481,189 @@ namespace OopLabProje
         {
             RefreshNotes();
         }
+
+        // akyldrmbyznr The codes for the notes section are finished.
+        // Reminder akyldrmbyznr
+        private void listBoxReminders_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (listBoxReminders.SelectedIndex != -1)
+            {
+                var selectedReminder = reminders[listBoxReminders.SelectedIndex];
+                dateTimePickerReminder.Value = selectedReminder.Date.Add(selectedReminder.Time);
+                textBoxReminderSummary.Text = selectedReminder.Summary;
+                textBoxReminderDescription.Text = selectedReminder.Description;
+                comboBoxReminderType.SelectedItem = selectedReminder.Type;
+            }
+        }
+        private void LoadRemindersFromFile()
+        {
+            string path = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "OopLabProje", "reminders.csv");
+            if (File.Exists(path))
+            {
+                using (StreamReader reader = new StreamReader(path))
+                {
+                    while (!reader.EndOfStream)
+                    {
+                        string line = reader.ReadLine();
+                        var reminder = Reminder.FromCsv(line);
+                        reminders.Add(reminder);
+                    }
+                }
+            }
+        }
+
+        private void SaveRemindersToFile()
+        {
+            string path = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "OopLabProje", "reminders.csv");
+            using (StreamWriter writer = new StreamWriter(path))
+            {
+                foreach (var reminder in reminders)
+                {
+                    writer.WriteLine(reminder.ToCsv());
+                }
+            }
+        }
+        private void RefreshReminders()
+        {
+            listBoxReminders.Items.Clear();
+            foreach (var reminder in reminders)
+            {
+                listBoxReminders.Items.Add(reminder.Summary);
+            }
+
+            SaveRemindersToFile();
+        }
+
+        private void btnAddReminder_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (comboBoxReminderType.SelectedItem == null)
+                {
+                    MessageBox.Show("Lütfen bir hatırlatıcı türü seçin.");
+                    return;
+                }
+
+                var reminder = new Reminder
+                {
+                    Date = dateTimePickerReminder.Value.Date,
+                    Time = dateTimePickerReminder.Value.TimeOfDay,
+                    Summary = textBoxReminderSummary.Text,
+                    Description = textBoxReminderDescription.Text,
+                    Type = (ReminderType)comboBoxReminderType.SelectedItem
+                };
+
+                reminders.Add(reminder);
+                RefreshReminders();
+                ClearReminderFields();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Hatırlatıcı eklenirken bir hata oluştu: {ex.Message}");
+            }
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            if (listBoxReminders.SelectedIndex == -1)
+            {
+                MessageBox.Show("Lütfen güncellemek için bir hatırlatıcı seçin.");
+                return;
+            }
+
+            var selectedReminder = reminders[listBoxReminders.SelectedIndex];
+            selectedReminder.Date = dateTimePickerReminder.Value.Date;
+            selectedReminder.Time = dateTimePickerReminder.Value.TimeOfDay;
+            selectedReminder.Summary = textBoxReminderSummary.Text;
+            selectedReminder.Description = textBoxReminderDescription.Text;
+            selectedReminder.Type = (ReminderType)comboBoxReminderType.SelectedItem;
+
+            RefreshReminders();
+            ClearReminderFields();
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            if (listBoxReminders.SelectedIndex == -1)
+            {
+                MessageBox.Show("Lütfen silmek için bir hatırlatıcı seçin.");
+                return;
+            }
+
+            reminders.RemoveAt(listBoxReminders.SelectedIndex);
+            RefreshReminders();
+            ClearReminderFields();
+        }
+        private void ClearReminderFields()
+        {
+            textBoxReminderSummary.Clear();
+            textBoxReminderDescription.Clear();
+            comboBoxReminderType.SelectedIndex = -1;
+        }
+
+        private void btnShowReminder_Click(object sender, EventArgs e)
+        {
+            if (listBoxReminders.SelectedIndex == -1)
+            {
+                MessageBox.Show("Lütfen bir hatırlatıcı seçin.");
+                return;
+            }
+
+            var selectedReminder = reminders[listBoxReminders.SelectedIndex];
+            ShowReminder(selectedReminder);
+        }
+        private void ShowReminder(Reminder reminder)
+        {
+            // Pencere başlığında hatırlatıcı özetini göster
+            this.Text = reminder.Summary;
+
+            // Pencereyi 2 saniye boyunca titreştir
+            for (int i = 0; i < 20; i++)
+            {
+                this.Left += i % 2 == 0 ? 10 : -10;
+                System.Threading.Thread.Sleep(50);
+            }
+            this.Left = (Screen.PrimaryScreen.WorkingArea.Width - this.Width) / 2;
+        }
+
+       
+
+        
     }
+
     // akyldrmbyznr The codes for the notes section are finished.
+
+
+    public class Reminder
+{
+    public DateTime Date { get; set; }
+    public TimeSpan Time { get; set; }
+    public string Summary { get; set; }
+    public string Description { get; set; }
+    public ReminderType Type { get; set; }
+
+    public string ToCsv()
+    {
+        return $"{Date.ToShortDateString()},{Time},{Summary},{Description},{Type}";
+    }
+
+    public static Reminder FromCsv(string csvLine)
+    {
+        string[] values = csvLine.Split(',');
+        return new Reminder
+        {
+            Date = DateTime.Parse(values[0]),
+            Time = TimeSpan.Parse(values[1]),
+            Summary = values[2],
+            Description = values[3],
+            Type = (ReminderType)Enum.Parse(typeof(ReminderType), values[4])
+        };
+    }
+}
+
+public enum ReminderType
+{
+    Meeting,
+    Task
+}
 }

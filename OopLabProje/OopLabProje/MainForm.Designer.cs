@@ -78,19 +78,33 @@
             this.cbUserType = new System.Windows.Forms.ComboBox();
             this.cbSelectUser = new System.Windows.Forms.ComboBox();
             this.tabPage4notes = new System.Windows.Forms.TabPage();
+            this.label13 = new System.Windows.Forms.Label();
+            this.textBoxNoteContent = new System.Windows.Forms.TextBox();
+            this.listBoxNotes = new System.Windows.Forms.ListBox();
+            this.btnAddNote = new System.Windows.Forms.Button();
             this.btnListNote = new System.Windows.Forms.Button();
             this.btnDeleteNote = new System.Windows.Forms.Button();
             this.btnUpdateNote = new System.Windows.Forms.Button();
-            this.btnAddNote = new System.Windows.Forms.Button();
-            this.listBoxNotes = new System.Windows.Forms.ListBox();
-            this.textBoxNoteContent = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
+            this.tabPage5reminder = new System.Windows.Forms.TabPage();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.btnShowReminder = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.btnUpdate = new System.Windows.Forms.Button();
+            this.btnAddReminder = new System.Windows.Forms.Button();
+            this.comboBoxReminderType = new System.Windows.Forms.ComboBox();
+            this.dateTimePickerReminder = new System.Windows.Forms.DateTimePicker();
+            this.textBoxReminderDescription = new System.Windows.Forms.TextBox();
+            this.textBoxReminderSummary = new System.Windows.Forms.TextBox();
+            this.listBoxReminders = new System.Windows.Forms.ListBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabPage2.SuspendLayout();
             this.tabPage4notes.SuspendLayout();
+            this.tabPage5reminder.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -99,6 +113,7 @@
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage4notes);
+            this.tabControl1.Controls.Add(this.tabPage5reminder);
             this.tabControl1.Location = new System.Drawing.Point(2, 2);
             this.tabControl1.Margin = new System.Windows.Forms.Padding(2);
             this.tabControl1.Name = "tabControl1";
@@ -630,6 +645,44 @@
             this.tabPage4notes.Text = "Notes";
             this.tabPage4notes.UseVisualStyleBackColor = true;
             // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(31, 24);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(60, 13);
+            this.label13.TabIndex = 7;
+            this.label13.Text = "a new note";
+            // 
+            // textBoxNoteContent
+            // 
+            this.textBoxNoteContent.BackColor = System.Drawing.Color.Azure;
+            this.textBoxNoteContent.Location = new System.Drawing.Point(34, 41);
+            this.textBoxNoteContent.Name = "textBoxNoteContent";
+            this.textBoxNoteContent.Size = new System.Drawing.Size(317, 20);
+            this.textBoxNoteContent.TabIndex = 6;
+            // 
+            // listBoxNotes
+            // 
+            this.listBoxNotes.BackColor = System.Drawing.Color.BlanchedAlmond;
+            this.listBoxNotes.FormattingEnabled = true;
+            this.listBoxNotes.Location = new System.Drawing.Point(34, 78);
+            this.listBoxNotes.Name = "listBoxNotes";
+            this.listBoxNotes.Size = new System.Drawing.Size(317, 225);
+            this.listBoxNotes.TabIndex = 5;
+            this.listBoxNotes.SelectedIndexChanged += new System.EventHandler(this.listBoxNotes_SelectedIndexChanged);
+            // 
+            // btnAddNote
+            // 
+            this.btnAddNote.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.btnAddNote.Location = new System.Drawing.Point(404, 24);
+            this.btnAddNote.Name = "btnAddNote";
+            this.btnAddNote.Size = new System.Drawing.Size(75, 23);
+            this.btnAddNote.TabIndex = 4;
+            this.btnAddNote.Text = "Add";
+            this.btnAddNote.UseVisualStyleBackColor = false;
+            this.btnAddNote.Click += new System.EventHandler(this.btnAddNote_Click);
+            // 
             // btnListNote
             // 
             this.btnListNote.BackColor = System.Drawing.Color.DarkSeaGreen;
@@ -663,43 +716,141 @@
             this.btnUpdateNote.UseVisualStyleBackColor = false;
             this.btnUpdateNote.Click += new System.EventHandler(this.btnUpdateNote_Click);
             // 
-            // btnAddNote
+            // tabPage5reminder
             // 
-            this.btnAddNote.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.btnAddNote.Location = new System.Drawing.Point(404, 24);
-            this.btnAddNote.Name = "btnAddNote";
-            this.btnAddNote.Size = new System.Drawing.Size(75, 23);
-            this.btnAddNote.TabIndex = 4;
-            this.btnAddNote.Text = "Add";
-            this.btnAddNote.UseVisualStyleBackColor = false;
-            this.btnAddNote.Click += new System.EventHandler(this.btnAddNote_Click);
+            this.tabPage5reminder.Controls.Add(this.label20);
+            this.tabPage5reminder.Controls.Add(this.label19);
+            this.tabPage5reminder.Controls.Add(this.label18);
+            this.tabPage5reminder.Controls.Add(this.btnShowReminder);
+            this.tabPage5reminder.Controls.Add(this.btnDelete);
+            this.tabPage5reminder.Controls.Add(this.btnUpdate);
+            this.tabPage5reminder.Controls.Add(this.btnAddReminder);
+            this.tabPage5reminder.Controls.Add(this.comboBoxReminderType);
+            this.tabPage5reminder.Controls.Add(this.dateTimePickerReminder);
+            this.tabPage5reminder.Controls.Add(this.textBoxReminderDescription);
+            this.tabPage5reminder.Controls.Add(this.textBoxReminderSummary);
+            this.tabPage5reminder.Controls.Add(this.listBoxReminders);
+            this.tabPage5reminder.Location = new System.Drawing.Point(4, 22);
+            this.tabPage5reminder.Name = "tabPage5reminder";
+            this.tabPage5reminder.Size = new System.Drawing.Size(598, 344);
+            this.tabPage5reminder.TabIndex = 4;
+            this.tabPage5reminder.Text = "Reminder";
+            this.tabPage5reminder.UseVisualStyleBackColor = true;
             // 
-            // listBoxNotes
+            // label20
             // 
-            this.listBoxNotes.BackColor = System.Drawing.Color.BlanchedAlmond;
-            this.listBoxNotes.FormattingEnabled = true;
-            this.listBoxNotes.Location = new System.Drawing.Point(34, 78);
-            this.listBoxNotes.Name = "listBoxNotes";
-            this.listBoxNotes.Size = new System.Drawing.Size(317, 225);
-            this.listBoxNotes.TabIndex = 5;
-            this.listBoxNotes.SelectedIndexChanged += new System.EventHandler(this.listBoxNotes_SelectedIndexChanged);
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(372, 136);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(31, 13);
+            this.label20.TabIndex = 11;
+            this.label20.Text = "Type";
             // 
-            // textBoxNoteContent
+            // label19
             // 
-            this.textBoxNoteContent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.textBoxNoteContent.Location = new System.Drawing.Point(34, 41);
-            this.textBoxNoteContent.Name = "textBoxNoteContent";
-            this.textBoxNoteContent.Size = new System.Drawing.Size(317, 20);
-            this.textBoxNoteContent.TabIndex = 6;
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(372, 84);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(60, 13);
+            this.label19.TabIndex = 10;
+            this.label19.Text = "Description";
             // 
-            // label13
+            // label18
             // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(31, 24);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(60, 13);
-            this.label13.TabIndex = 7;
-            this.label13.Text = "a new note";
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(372, 34);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(50, 13);
+            this.label18.TabIndex = 9;
+            this.label18.Text = "Summary";
+            // 
+            // btnShowReminder
+            // 
+            this.btnShowReminder.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.btnShowReminder.Location = new System.Drawing.Point(507, 293);
+            this.btnShowReminder.Name = "btnShowReminder";
+            this.btnShowReminder.Size = new System.Drawing.Size(75, 23);
+            this.btnShowReminder.TabIndex = 8;
+            this.btnShowReminder.Text = "Show Reminder";
+            this.btnShowReminder.UseVisualStyleBackColor = false;
+            this.btnShowReminder.Click += new System.EventHandler(this.btnShowReminder_Click);
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.btnDelete.Location = new System.Drawing.Point(375, 293);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(75, 23);
+            this.btnDelete.TabIndex = 7;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.btnUpdate.Location = new System.Drawing.Point(507, 239);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(75, 23);
+            this.btnUpdate.TabIndex = 6;
+            this.btnUpdate.Text = "Update";
+            this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            // 
+            // btnAddReminder
+            // 
+            this.btnAddReminder.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.btnAddReminder.Location = new System.Drawing.Point(375, 239);
+            this.btnAddReminder.Name = "btnAddReminder";
+            this.btnAddReminder.Size = new System.Drawing.Size(75, 23);
+            this.btnAddReminder.TabIndex = 5;
+            this.btnAddReminder.Text = "Add";
+            this.btnAddReminder.UseVisualStyleBackColor = false;
+            this.btnAddReminder.Click += new System.EventHandler(this.btnAddReminder_Click);
+            // 
+            // comboBoxReminderType
+            // 
+            this.comboBoxReminderType.BackColor = System.Drawing.Color.Azure;
+            this.comboBoxReminderType.FormattingEnabled = true;
+            this.comboBoxReminderType.Location = new System.Drawing.Point(375, 152);
+            this.comboBoxReminderType.Name = "comboBoxReminderType";
+            this.comboBoxReminderType.Size = new System.Drawing.Size(207, 21);
+            this.comboBoxReminderType.TabIndex = 4;
+            // 
+            // dateTimePickerReminder
+            // 
+            this.dateTimePickerReminder.CalendarMonthBackground = System.Drawing.Color.Azure;
+            this.dateTimePickerReminder.CalendarTitleBackColor = System.Drawing.Color.DarkSeaGreen;
+            this.dateTimePickerReminder.Location = new System.Drawing.Point(375, 193);
+            this.dateTimePickerReminder.Name = "dateTimePickerReminder";
+            this.dateTimePickerReminder.Size = new System.Drawing.Size(207, 20);
+            this.dateTimePickerReminder.TabIndex = 3;
+            // 
+            // textBoxReminderDescription
+            // 
+            this.textBoxReminderDescription.BackColor = System.Drawing.Color.Azure;
+            this.textBoxReminderDescription.Location = new System.Drawing.Point(375, 100);
+            this.textBoxReminderDescription.Name = "textBoxReminderDescription";
+            this.textBoxReminderDescription.Size = new System.Drawing.Size(207, 20);
+            this.textBoxReminderDescription.TabIndex = 2;
+            // 
+            // textBoxReminderSummary
+            // 
+            this.textBoxReminderSummary.BackColor = System.Drawing.Color.Azure;
+            this.textBoxReminderSummary.Location = new System.Drawing.Point(375, 50);
+            this.textBoxReminderSummary.Name = "textBoxReminderSummary";
+            this.textBoxReminderSummary.Size = new System.Drawing.Size(207, 20);
+            this.textBoxReminderSummary.TabIndex = 1;
+            // 
+            // listBoxReminders
+            // 
+            this.listBoxReminders.BackColor = System.Drawing.Color.BlanchedAlmond;
+            this.listBoxReminders.FormattingEnabled = true;
+            this.listBoxReminders.Location = new System.Drawing.Point(21, 14);
+            this.listBoxReminders.Name = "listBoxReminders";
+            this.listBoxReminders.Size = new System.Drawing.Size(332, 303);
+            this.listBoxReminders.TabIndex = 0;
+            this.listBoxReminders.SelectedIndexChanged += new System.EventHandler(this.listBoxReminders_SelectedIndexChanged);
             // 
             // MainForm
             // 
@@ -721,6 +872,8 @@
             this.tabPage2.PerformLayout();
             this.tabPage4notes.ResumeLayout(false);
             this.tabPage4notes.PerformLayout();
+            this.tabPage5reminder.ResumeLayout(false);
+            this.tabPage5reminder.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -784,5 +937,18 @@
         private System.Windows.Forms.ListBox listBoxNotes;
         private System.Windows.Forms.TextBox textBoxNoteContent;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.TabPage tabPage5reminder;
+        private System.Windows.Forms.ComboBox comboBoxReminderType;
+        private System.Windows.Forms.DateTimePicker dateTimePickerReminder;
+        private System.Windows.Forms.TextBox textBoxReminderDescription;
+        private System.Windows.Forms.TextBox textBoxReminderSummary;
+        private System.Windows.Forms.ListBox listBoxReminders;
+        private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Button btnUpdate;
+        private System.Windows.Forms.Button btnAddReminder;
+        private System.Windows.Forms.Button btnShowReminder;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label20;
     }
 }
