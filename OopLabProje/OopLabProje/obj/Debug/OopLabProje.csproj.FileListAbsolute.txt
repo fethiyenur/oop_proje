@@ -1,0 +1,12 @@
+D:\School Git\OopLabProje\OopLabProje\obj\Debug\OopLabProje.csproj.AssemblyReference.cache
+D:\School Git\OopLabProje\OopLabProje\obj\Debug\OopLabProje.csproj.SuggestedBindingRedirects.cache
+D:\School Git\OopLabProje\OopLabProje\obj\Debug\OopLabProje.LoginForm.resources
+D:\School Git\OopLabProje\OopLabProje\obj\Debug\OopLabProje.Properties.Resources.resources
+D:\School Git\OopLabProje\OopLabProje\obj\Debug\OopLabProje.csproj.GenerateResource.cache
+D:\School Git\OopLabProje\OopLabProje\obj\Debug\OopLabProje.csproj.CoreCompileInputs.cache
+D:\School Git\OopLabProje\OopLabProje\bin\Debug\OopLabProje.exe.config
+D:\School Git\OopLabProje\OopLabProje\bin\Debug\OopLabProje.exe
+D:\School Git\OopLabProje\OopLabProje\bin\Debug\OopLabProje.pdb
+D:\School Git\OopLabProje\OopLabProje\obj\Debug\OopLabProje.exe
+D:\School Git\OopLabProje\OopLabProje\obj\Debug\OopLabProje.pdb
+D:\School Git\OopLabProje\OopLabProje\obj\Debug\OopLabProje.MainForm.resources
