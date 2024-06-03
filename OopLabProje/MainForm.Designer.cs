@@ -88,34 +88,34 @@
             this.btnDeleteNote = new System.Windows.Forms.Button();
             this.btnUpdateNote = new System.Windows.Forms.Button();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.radioButtonYonetEvet = new System.Windows.Forms.RadioButton();
+            this.radioButtonYonetHayir = new System.Windows.Forms.RadioButton();
+            this.comboBoxYonetici = new System.Windows.Forms.ComboBox();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.radioButtonUstHayir = new System.Windows.Forms.RadioButton();
+            this.radioButtonUstEvet = new System.Windows.Forms.RadioButton();
+            this.comboBoxUstOgr = new System.Windows.Forms.ComboBox();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.comboBoxDeneyim = new System.Windows.Forms.ComboBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.comboBoxIl = new System.Windows.Forms.ComboBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.radioButtonBekar = new System.Windows.Forms.RadioButton();
+            this.radioButtonEvli = new System.Windows.Forms.RadioButton();
+            this.comboBoxAile = new System.Windows.Forms.ComboBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.comboBoxDil = new System.Windows.Forms.ComboBox();
+            this.radioButtonDilVar = new System.Windows.Forms.RadioButton();
+            this.radioButtonDilYok = new System.Windows.Forms.RadioButton();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.labelucret = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
-            this.radioButtonEvli = new System.Windows.Forms.RadioButton();
-            this.radioButtonBekar = new System.Windows.Forms.RadioButton();
-            this.radioButtonDilYok = new System.Windows.Forms.RadioButton();
-            this.radioButtonDilVar = new System.Windows.Forms.RadioButton();
-            this.radioButtonYonetHayir = new System.Windows.Forms.RadioButton();
-            this.radioButtonYonetEvet = new System.Windows.Forms.RadioButton();
-            this.radioButtonUstHayir = new System.Windows.Forms.RadioButton();
-            this.radioButtonUstEvet = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.button9 = new System.Windows.Forms.Button();
-            this.comboBoxAile = new System.Windows.Forms.ComboBox();
-            this.comboBoxYonetici = new System.Windows.Forms.ComboBox();
-            this.comboBoxDil = new System.Windows.Forms.ComboBox();
-            this.comboBoxUstOgr = new System.Windows.Forms.ComboBox();
-            this.comboBoxIl = new System.Windows.Forms.ComboBox();
-            this.comboBoxDeneyim = new System.Windows.Forms.ComboBox();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage3.SuspendLayout();
@@ -123,12 +123,12 @@
             this.tabPage2.SuspendLayout();
             this.tabPage4notes.SuspendLayout();
             this.tabPage4.SuspendLayout();
-            this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            this.groupBox3.SuspendLayout();
-            this.groupBox4.SuspendLayout();
-            this.groupBox5.SuspendLayout();
             this.groupBox6.SuspendLayout();
+            this.groupBox5.SuspendLayout();
+            this.groupBox4.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -774,109 +774,17 @@
             this.tabPage4.Click += new System.EventHandler(this.tabPage4_Click);
             this.tabPage4.Enter += new System.EventHandler(this.tabPage4_Enter);
             // 
-            // comboBox1
+            // groupBox6
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Seçiniz",
-            "Full-Time",
-            "Part-Time"});
-            this.comboBox1.Location = new System.Drawing.Point(666, 100);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 24);
-            this.comboBox1.TabIndex = 29;
-            this.comboBox1.Text = "Seçiniz";
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
-            // 
-            // labelucret
-            // 
-            this.labelucret.AutoSize = true;
-            this.labelucret.BackColor = System.Drawing.Color.Gold;
-            this.labelucret.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelucret.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.labelucret.Location = new System.Drawing.Point(592, 360);
-            this.labelucret.Name = "labelucret";
-            this.labelucret.Size = new System.Drawing.Size(20, 18);
-            this.labelucret.TabIndex = 28;
-            this.labelucret.Text = "   ";
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.BackColor = System.Drawing.Color.Gold;
-            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label25.Location = new System.Drawing.Point(412, 360);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(156, 18);
-            this.label25.TabIndex = 27;
-            this.label25.Text = "En Az Aylık Brüt Ücret:";
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(665, 64);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(108, 16);
-            this.label24.TabIndex = 26;
-            this.label24.Text = "Çalışma Durumu:";
-            // 
-            // radioButtonEvli
-            // 
-            this.radioButtonEvli.AutoSize = true;
-            this.radioButtonEvli.Location = new System.Drawing.Point(134, 31);
-            this.radioButtonEvli.Name = "radioButtonEvli";
-            this.radioButtonEvli.Size = new System.Drawing.Size(50, 20);
-            this.radioButtonEvli.TabIndex = 23;
-            this.radioButtonEvli.TabStop = true;
-            this.radioButtonEvli.Text = "Evli";
-            this.radioButtonEvli.UseVisualStyleBackColor = true;
-            this.radioButtonEvli.CheckedChanged += new System.EventHandler(this.radioButtonEvli_CheckedChanged);
-            // 
-            // radioButtonBekar
-            // 
-            this.radioButtonBekar.AutoSize = true;
-            this.radioButtonBekar.Location = new System.Drawing.Point(9, 31);
-            this.radioButtonBekar.Name = "radioButtonBekar";
-            this.radioButtonBekar.Size = new System.Drawing.Size(64, 20);
-            this.radioButtonBekar.TabIndex = 22;
-            this.radioButtonBekar.TabStop = true;
-            this.radioButtonBekar.Text = "Bekar";
-            this.radioButtonBekar.UseVisualStyleBackColor = true;
-            // 
-            // radioButtonDilYok
-            // 
-            this.radioButtonDilYok.AutoSize = true;
-            this.radioButtonDilYok.Location = new System.Drawing.Point(132, 27);
-            this.radioButtonDilYok.Name = "radioButtonDilYok";
-            this.radioButtonDilYok.Size = new System.Drawing.Size(52, 20);
-            this.radioButtonDilYok.TabIndex = 21;
-            this.radioButtonDilYok.TabStop = true;
-            this.radioButtonDilYok.Text = "Yok";
-            this.radioButtonDilYok.UseVisualStyleBackColor = true;
-            // 
-            // radioButtonDilVar
-            // 
-            this.radioButtonDilVar.AutoSize = true;
-            this.radioButtonDilVar.Location = new System.Drawing.Point(15, 27);
-            this.radioButtonDilVar.Name = "radioButtonDilVar";
-            this.radioButtonDilVar.Size = new System.Drawing.Size(49, 20);
-            this.radioButtonDilVar.TabIndex = 20;
-            this.radioButtonDilVar.TabStop = true;
-            this.radioButtonDilVar.Text = "Var";
-            this.radioButtonDilVar.UseVisualStyleBackColor = true;
-            this.radioButtonDilVar.CheckedChanged += new System.EventHandler(this.radioButtonDilVar_CheckedChanged);
-            // 
-            // radioButtonYonetHayir
-            // 
-            this.radioButtonYonetHayir.AutoSize = true;
-            this.radioButtonYonetHayir.Location = new System.Drawing.Point(129, 37);
-            this.radioButtonYonetHayir.Name = "radioButtonYonetHayir";
-            this.radioButtonYonetHayir.Size = new System.Drawing.Size(60, 20);
-            this.radioButtonYonetHayir.TabIndex = 19;
-            this.radioButtonYonetHayir.TabStop = true;
-            this.radioButtonYonetHayir.Text = "Hayır";
-            this.radioButtonYonetHayir.UseVisualStyleBackColor = true;
+            this.groupBox6.Controls.Add(this.radioButtonYonetEvet);
+            this.groupBox6.Controls.Add(this.radioButtonYonetHayir);
+            this.groupBox6.Controls.Add(this.comboBoxYonetici);
+            this.groupBox6.Location = new System.Drawing.Point(38, 248);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(284, 100);
+            this.groupBox6.TabIndex = 18;
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Text = "Yöneticilik Görevi:";
             // 
             // radioButtonYonetEvet
             // 
@@ -890,81 +798,16 @@
             this.radioButtonYonetEvet.UseVisualStyleBackColor = true;
             this.radioButtonYonetEvet.CheckedChanged += new System.EventHandler(this.radioButtonYonetEvet_CheckedChanged);
             // 
-            // radioButtonUstHayir
+            // radioButtonYonetHayir
             // 
-            this.radioButtonUstHayir.AutoSize = true;
-            this.radioButtonUstHayir.Location = new System.Drawing.Point(129, 27);
-            this.radioButtonUstHayir.Name = "radioButtonUstHayir";
-            this.radioButtonUstHayir.Size = new System.Drawing.Size(60, 20);
-            this.radioButtonUstHayir.TabIndex = 17;
-            this.radioButtonUstHayir.TabStop = true;
-            this.radioButtonUstHayir.Text = "Hayır";
-            this.radioButtonUstHayir.UseVisualStyleBackColor = true;
-            // 
-            // radioButtonUstEvet
-            // 
-            this.radioButtonUstEvet.AutoSize = true;
-            this.radioButtonUstEvet.Location = new System.Drawing.Point(12, 27);
-            this.radioButtonUstEvet.Name = "radioButtonUstEvet";
-            this.radioButtonUstEvet.Size = new System.Drawing.Size(55, 20);
-            this.radioButtonUstEvet.TabIndex = 16;
-            this.radioButtonUstEvet.TabStop = true;
-            this.radioButtonUstEvet.Text = "Evet";
-            this.radioButtonUstEvet.UseVisualStyleBackColor = true;
-            this.radioButtonUstEvet.CheckedChanged += new System.EventHandler(this.radioButtonUstEvet_CheckedChanged);
-            // 
-            // radioButton2
-            // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(129, 24);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(52, 20);
-            this.radioButton2.TabIndex = 15;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Yok";
-            this.radioButton2.UseVisualStyleBackColor = true;
-            this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
-            // 
-            // radioButton1
-            // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(12, 28);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(49, 20);
-            this.radioButton1.TabIndex = 14;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Var";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
-            // 
-            // button9
-            // 
-            this.button9.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button9.Location = new System.Drawing.Point(283, 354);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(96, 33);
-            this.button9.TabIndex = 13;
-            this.button9.Text = "Enter";
-            this.button9.UseVisualStyleBackColor = false;
-            this.button9.Click += new System.EventHandler(this.button9_Click);
-            // 
-            // comboBoxAile
-            // 
-            this.comboBoxAile.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.comboBoxAile.FormattingEnabled = true;
-            this.comboBoxAile.Items.AddRange(new object[] {
-            "Seçiniz",
-            "Evli ve eşi çalışmıyor ",
-            "0-6 yaş arası çocuk ",
-            "7-18 yaş arası çocuk ",
-            "18 yaş üstü çocuk(Üniversite lisans/ön lisans öğrencisi olmak koşuluyla)"});
-            this.comboBoxAile.Location = new System.Drawing.Point(9, 62);
-            this.comboBoxAile.Name = "comboBoxAile";
-            this.comboBoxAile.Size = new System.Drawing.Size(257, 24);
-            this.comboBoxAile.TabIndex = 5;
-            this.comboBoxAile.Text = "Seçiniz";
-            this.comboBoxAile.Visible = false;
-            this.comboBoxAile.SelectedIndexChanged += new System.EventHandler(this.comboBoxAile_SelectedIndexChanged);
+            this.radioButtonYonetHayir.AutoSize = true;
+            this.radioButtonYonetHayir.Location = new System.Drawing.Point(129, 37);
+            this.radioButtonYonetHayir.Name = "radioButtonYonetHayir";
+            this.radioButtonYonetHayir.Size = new System.Drawing.Size(60, 20);
+            this.radioButtonYonetHayir.TabIndex = 19;
+            this.radioButtonYonetHayir.TabStop = true;
+            this.radioButtonYonetHayir.Text = "Hayır";
+            this.radioButtonYonetHayir.UseVisualStyleBackColor = true;
             // 
             // comboBoxYonetici
             // 
@@ -991,22 +834,40 @@
             this.comboBoxYonetici.Visible = false;
             this.comboBoxYonetici.SelectedIndexChanged += new System.EventHandler(this.comboBoxYonetici_SelectedIndexChanged);
             // 
-            // comboBoxDil
+            // groupBox5
             // 
-            this.comboBoxDil.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.comboBoxDil.FormattingEnabled = true;
-            this.comboBoxDil.Items.AddRange(new object[] {
-            "Seçiniz",
-            "Belgelendirilmiş İngilizce bilgisi ",
-            "İngilizce eğitim veren okul mezuniyeti ",
-            "Belgelendirilmiş diğer yabancı dil bilgisi (her dil için) "});
-            this.comboBoxDil.Location = new System.Drawing.Point(9, 53);
-            this.comboBoxDil.Name = "comboBoxDil";
-            this.comboBoxDil.Size = new System.Drawing.Size(257, 24);
-            this.comboBoxDil.TabIndex = 3;
-            this.comboBoxDil.Text = "Seçiniz";
-            this.comboBoxDil.Visible = false;
-            this.comboBoxDil.SelectedIndexChanged += new System.EventHandler(this.comboBoxDil_SelectedIndexChanged);
+            this.groupBox5.Controls.Add(this.radioButtonUstHayir);
+            this.groupBox5.Controls.Add(this.radioButtonUstEvet);
+            this.groupBox5.Controls.Add(this.comboBoxUstOgr);
+            this.groupBox5.Location = new System.Drawing.Point(38, 142);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(284, 100);
+            this.groupBox5.TabIndex = 32;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "Üst Öğrenim:";
+            // 
+            // radioButtonUstHayir
+            // 
+            this.radioButtonUstHayir.AutoSize = true;
+            this.radioButtonUstHayir.Location = new System.Drawing.Point(129, 27);
+            this.radioButtonUstHayir.Name = "radioButtonUstHayir";
+            this.radioButtonUstHayir.Size = new System.Drawing.Size(60, 20);
+            this.radioButtonUstHayir.TabIndex = 17;
+            this.radioButtonUstHayir.TabStop = true;
+            this.radioButtonUstHayir.Text = "Hayır";
+            this.radioButtonUstHayir.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonUstEvet
+            // 
+            this.radioButtonUstEvet.AutoSize = true;
+            this.radioButtonUstEvet.Location = new System.Drawing.Point(12, 27);
+            this.radioButtonUstEvet.Name = "radioButtonUstEvet";
+            this.radioButtonUstEvet.Size = new System.Drawing.Size(55, 20);
+            this.radioButtonUstEvet.TabIndex = 16;
+            this.radioButtonUstEvet.TabStop = true;
+            this.radioButtonUstEvet.Text = "Evet";
+            this.radioButtonUstEvet.UseVisualStyleBackColor = true;
+            this.radioButtonUstEvet.CheckedChanged += new System.EventHandler(this.radioButtonUstEvet_CheckedChanged);
             // 
             // comboBoxUstOgr
             // 
@@ -1026,6 +887,72 @@
             this.comboBoxUstOgr.Text = "Seçiniz";
             this.comboBoxUstOgr.Visible = false;
             this.comboBoxUstOgr.SelectedIndexChanged += new System.EventHandler(this.comboBoxUstOgr_SelectedIndexChanged);
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.radioButton1);
+            this.groupBox4.Controls.Add(this.radioButton2);
+            this.groupBox4.Controls.Add(this.comboBoxDeneyim);
+            this.groupBox4.Location = new System.Drawing.Point(38, 36);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(284, 100);
+            this.groupBox4.TabIndex = 2;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Deneyim:";
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(12, 28);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(49, 20);
+            this.radioButton1.TabIndex = 14;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "Var";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Location = new System.Drawing.Point(129, 24);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(52, 20);
+            this.radioButton2.TabIndex = 15;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "Yok";
+            this.radioButton2.UseVisualStyleBackColor = true;
+            this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
+            // 
+            // comboBoxDeneyim
+            // 
+            this.comboBoxDeneyim.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.comboBoxDeneyim.FormattingEnabled = true;
+            this.comboBoxDeneyim.Items.AddRange(new object[] {
+            "Seçiniz",
+            "2-4",
+            "5-9",
+            "10-14",
+            "15-20",
+            "20 yıl üstü "});
+            this.comboBoxDeneyim.Location = new System.Drawing.Point(11, 64);
+            this.comboBoxDeneyim.Name = "comboBoxDeneyim";
+            this.comboBoxDeneyim.Size = new System.Drawing.Size(249, 24);
+            this.comboBoxDeneyim.TabIndex = 0;
+            this.comboBoxDeneyim.Text = "Seçiniz";
+            this.comboBoxDeneyim.Visible = false;
+            this.comboBoxDeneyim.SelectedIndexChanged += new System.EventHandler(this.comboBoxDeneyim_SelectedIndexChanged);
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.comboBoxIl);
+            this.groupBox3.Location = new System.Drawing.Point(328, 36);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(284, 100);
+            this.groupBox3.TabIndex = 31;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Yaşanan İl:";
+            this.groupBox3.Enter += new System.EventHandler(this.groupBox3_Enter);
             // 
             // comboBoxIl
             // 
@@ -1121,24 +1048,58 @@
             this.comboBoxIl.Text = "Seçiniz";
             this.comboBoxIl.SelectedIndexChanged += new System.EventHandler(this.comboBoxIl_SelectedIndexChanged);
             // 
-            // comboBoxDeneyim
+            // groupBox2
             // 
-            this.comboBoxDeneyim.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.comboBoxDeneyim.FormattingEnabled = true;
-            this.comboBoxDeneyim.Items.AddRange(new object[] {
+            this.groupBox2.Controls.Add(this.radioButtonBekar);
+            this.groupBox2.Controls.Add(this.radioButtonEvli);
+            this.groupBox2.Controls.Add(this.comboBoxAile);
+            this.groupBox2.Location = new System.Drawing.Point(328, 248);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(284, 100);
+            this.groupBox2.TabIndex = 22;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Aile Durumu:";
+            // 
+            // radioButtonBekar
+            // 
+            this.radioButtonBekar.AutoSize = true;
+            this.radioButtonBekar.Location = new System.Drawing.Point(9, 31);
+            this.radioButtonBekar.Name = "radioButtonBekar";
+            this.radioButtonBekar.Size = new System.Drawing.Size(64, 20);
+            this.radioButtonBekar.TabIndex = 22;
+            this.radioButtonBekar.TabStop = true;
+            this.radioButtonBekar.Text = "Bekar";
+            this.radioButtonBekar.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonEvli
+            // 
+            this.radioButtonEvli.AutoSize = true;
+            this.radioButtonEvli.Location = new System.Drawing.Point(134, 31);
+            this.radioButtonEvli.Name = "radioButtonEvli";
+            this.radioButtonEvli.Size = new System.Drawing.Size(50, 20);
+            this.radioButtonEvli.TabIndex = 23;
+            this.radioButtonEvli.TabStop = true;
+            this.radioButtonEvli.Text = "Evli";
+            this.radioButtonEvli.UseVisualStyleBackColor = true;
+            this.radioButtonEvli.CheckedChanged += new System.EventHandler(this.radioButtonEvli_CheckedChanged);
+            // 
+            // comboBoxAile
+            // 
+            this.comboBoxAile.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.comboBoxAile.FormattingEnabled = true;
+            this.comboBoxAile.Items.AddRange(new object[] {
             "Seçiniz",
-            "2-4",
-            "5-9",
-            "10-14",
-            "15-20",
-            "20 yıl üstü "});
-            this.comboBoxDeneyim.Location = new System.Drawing.Point(11, 64);
-            this.comboBoxDeneyim.Name = "comboBoxDeneyim";
-            this.comboBoxDeneyim.Size = new System.Drawing.Size(249, 24);
-            this.comboBoxDeneyim.TabIndex = 0;
-            this.comboBoxDeneyim.Text = "Seçiniz";
-            this.comboBoxDeneyim.Visible = false;
-            this.comboBoxDeneyim.SelectedIndexChanged += new System.EventHandler(this.comboBoxDeneyim_SelectedIndexChanged);
+            "Evli ve eşi çalışmıyor ",
+            "0-6 yaş arası çocuk ",
+            "7-18 yaş arası çocuk ",
+            "18 yaş üstü çocuk(Üniversite lisans/ön lisans öğrencisi olmak koşuluyla)"});
+            this.comboBoxAile.Location = new System.Drawing.Point(9, 62);
+            this.comboBoxAile.Name = "comboBoxAile";
+            this.comboBoxAile.Size = new System.Drawing.Size(257, 24);
+            this.comboBoxAile.TabIndex = 5;
+            this.comboBoxAile.Text = "Seçiniz";
+            this.comboBoxAile.Visible = false;
+            this.comboBoxAile.SelectedIndexChanged += new System.EventHandler(this.comboBoxAile_SelectedIndexChanged);
             // 
             // groupBox1
             // 
@@ -1152,63 +1113,103 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Yabancı Dil Bilgisi:";
             // 
-            // groupBox2
+            // comboBoxDil
             // 
-            this.groupBox2.Controls.Add(this.radioButtonBekar);
-            this.groupBox2.Controls.Add(this.radioButtonEvli);
-            this.groupBox2.Controls.Add(this.comboBoxAile);
-            this.groupBox2.Location = new System.Drawing.Point(328, 248);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(284, 100);
-            this.groupBox2.TabIndex = 22;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Aile Durumu:";
+            this.comboBoxDil.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.comboBoxDil.FormattingEnabled = true;
+            this.comboBoxDil.Items.AddRange(new object[] {
+            "Seçiniz",
+            "Belgelendirilmiş İngilizce bilgisi ",
+            "İngilizce eğitim veren okul mezuniyeti ",
+            "Belgelendirilmiş diğer yabancı dil bilgisi (her dil için) "});
+            this.comboBoxDil.Location = new System.Drawing.Point(9, 53);
+            this.comboBoxDil.Name = "comboBoxDil";
+            this.comboBoxDil.Size = new System.Drawing.Size(257, 24);
+            this.comboBoxDil.TabIndex = 3;
+            this.comboBoxDil.Text = "Seçiniz";
+            this.comboBoxDil.Visible = false;
+            this.comboBoxDil.SelectedIndexChanged += new System.EventHandler(this.comboBoxDil_SelectedIndexChanged);
             // 
-            // groupBox3
+            // radioButtonDilVar
             // 
-            this.groupBox3.Controls.Add(this.comboBoxIl);
-            this.groupBox3.Location = new System.Drawing.Point(328, 36);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(284, 100);
-            this.groupBox3.TabIndex = 31;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Yaşanan İl:";
+            this.radioButtonDilVar.AutoSize = true;
+            this.radioButtonDilVar.Location = new System.Drawing.Point(15, 27);
+            this.radioButtonDilVar.Name = "radioButtonDilVar";
+            this.radioButtonDilVar.Size = new System.Drawing.Size(49, 20);
+            this.radioButtonDilVar.TabIndex = 20;
+            this.radioButtonDilVar.TabStop = true;
+            this.radioButtonDilVar.Text = "Var";
+            this.radioButtonDilVar.UseVisualStyleBackColor = true;
+            this.radioButtonDilVar.CheckedChanged += new System.EventHandler(this.radioButtonDilVar_CheckedChanged);
             // 
-            // groupBox4
+            // radioButtonDilYok
             // 
-            this.groupBox4.Controls.Add(this.radioButton1);
-            this.groupBox4.Controls.Add(this.radioButton2);
-            this.groupBox4.Controls.Add(this.comboBoxDeneyim);
-            this.groupBox4.Location = new System.Drawing.Point(38, 36);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(284, 100);
-            this.groupBox4.TabIndex = 2;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Deneyim:";
+            this.radioButtonDilYok.AutoSize = true;
+            this.radioButtonDilYok.Location = new System.Drawing.Point(132, 27);
+            this.radioButtonDilYok.Name = "radioButtonDilYok";
+            this.radioButtonDilYok.Size = new System.Drawing.Size(52, 20);
+            this.radioButtonDilYok.TabIndex = 21;
+            this.radioButtonDilYok.TabStop = true;
+            this.radioButtonDilYok.Text = "Yok";
+            this.radioButtonDilYok.UseVisualStyleBackColor = true;
             // 
-            // groupBox5
+            // comboBox1
             // 
-            this.groupBox5.Controls.Add(this.radioButtonUstHayir);
-            this.groupBox5.Controls.Add(this.radioButtonUstEvet);
-            this.groupBox5.Controls.Add(this.comboBoxUstOgr);
-            this.groupBox5.Location = new System.Drawing.Point(38, 142);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(284, 100);
-            this.groupBox5.TabIndex = 32;
-            this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "Üst Öğrenim:";
+            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Seçiniz",
+            "Full-Time",
+            "Part-Time"});
+            this.comboBox1.Location = new System.Drawing.Point(666, 100);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 24);
+            this.comboBox1.TabIndex = 29;
+            this.comboBox1.Text = "Seçiniz";
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
-            // groupBox6
+            // labelucret
             // 
-            this.groupBox6.Controls.Add(this.radioButtonYonetEvet);
-            this.groupBox6.Controls.Add(this.radioButtonYonetHayir);
-            this.groupBox6.Controls.Add(this.comboBoxYonetici);
-            this.groupBox6.Location = new System.Drawing.Point(38, 248);
-            this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(284, 100);
-            this.groupBox6.TabIndex = 18;
-            this.groupBox6.TabStop = false;
-            this.groupBox6.Text = "Yöneticilik Görevi:";
+            this.labelucret.AutoSize = true;
+            this.labelucret.BackColor = System.Drawing.Color.Gold;
+            this.labelucret.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelucret.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.labelucret.Location = new System.Drawing.Point(592, 360);
+            this.labelucret.Name = "labelucret";
+            this.labelucret.Size = new System.Drawing.Size(20, 18);
+            this.labelucret.TabIndex = 28;
+            this.labelucret.Text = "   ";
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.BackColor = System.Drawing.Color.Gold;
+            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label25.Location = new System.Drawing.Point(412, 360);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(156, 18);
+            this.label25.TabIndex = 27;
+            this.label25.Text = "En Az Aylık Brüt Ücret:";
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(665, 64);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(108, 16);
+            this.label24.TabIndex = 26;
+            this.label24.Text = "Çalışma Durumu:";
+            // 
+            // button9
+            // 
+            this.button9.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.button9.Location = new System.Drawing.Point(283, 354);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(96, 33);
+            this.button9.TabIndex = 13;
+            this.button9.Text = "Enter";
+            this.button9.UseVisualStyleBackColor = false;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // MainForm
             // 
@@ -1232,17 +1233,17 @@
             this.tabPage4notes.PerformLayout();
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox4.PerformLayout();
-            this.groupBox5.ResumeLayout(false);
-            this.groupBox5.PerformLayout();
             this.groupBox6.ResumeLayout(false);
             this.groupBox6.PerformLayout();
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }

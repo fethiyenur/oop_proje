@@ -476,6 +476,10 @@ namespace OopLabProje
             RefreshNotes();
         }
         
+
+        // Salary Calculator 
+
+        // salary hesaplanması için ihtiyacımız olan katsayıların tanımlanması
         private double deneyimK = 0.0;
         private double ilK = 0.0;
         private double ustK = 0.0;
@@ -483,10 +487,13 @@ namespace OopLabProje
         private double DilK = 0.0;
         private double AileK = 0.0;
         private double calismaTuru = 1;
+
+        // baz ücret için belgeden alınan değer
         private double bazUcret = 26828;
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
-            if (radioButton1 != null)
+            
+            if (radioButton1 != null) // deneyim varsa combobox açılır ve deneyim süresi seçilir
             {
                 comboBoxDeneyim.Visible = true;
             }
@@ -494,7 +501,7 @@ namespace OopLabProje
 
         private void radioButtonUstEvet_CheckedChanged(object sender, EventArgs e)
         {
-            if(radioButtonUstEvet != null)
+            if(radioButtonUstEvet != null) // üst öğrenim varsa combobox açılır ve üst öğrenim türü seçilir
             {
                 comboBoxUstOgr.Visible = true;
             }
@@ -502,31 +509,35 @@ namespace OopLabProje
         
         private void radioButtonYonetEvet_CheckedChanged(object sender, EventArgs e)
         {
-            if((radioButtonYonetEvet != null)){
+            if((radioButtonYonetEvet != null)) // Yöneticilik görevi varsa combobox açılır ve tür seçilir
+            {
                 comboBoxYonetici.Visible = true;
             }
         }
 
         private void radioButtonDilVar_CheckedChanged(object sender, EventArgs e)
         {
-            if ((radioButtonDilVar != null)) { 
+            if ((radioButtonDilVar != null)) // Yabancı dil için combobox açılır
+            { 
                 comboBoxDil.Visible = true;
             }
         }
 
         private void radioButtonEvli_CheckedChanged(object sender, EventArgs e)
         {
-            if (radioButtonEvli != null) {
+            if (radioButtonEvli != null) // eğer evliyse combobox açılır
+            {
                 comboBoxAile.Visible = true;
                     }
         }
 
         private void comboBoxDeneyim_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+                // Deneyim comboboxında seçilen seçeneğe göre deneyim katsayısının değeri değiştirilir
                 switch (comboBoxDeneyim.SelectedIndex)
-                {
-                    case 1:
+                {   
+                    // sıfıncı indexte seçiniz özelliği var 
+                    case 1: 
                         deneyimK = 0.60;
                         break;
                     case 2:
@@ -549,9 +560,11 @@ namespace OopLabProje
 
         private void comboBoxIl_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+                // yaşanılan ilin seçilmesine göre il katsayısı değiştirilir
+                // belgedeki iller için katsayı değerleri alfabetik sırasına göre case'lere yerleştirildi 
                 switch (comboBoxIl.SelectedIndex)
                 {
+                // sıfıncı indexte seçiniz özelliği var 
                     case 1:
                         ilK = 0.05;
                         break;
@@ -642,7 +655,7 @@ namespace OopLabProje
                     case 79:
                         ilK = 0.10;
                         break;
-
+                // diğerleri için katsayı 0
                     default:
                         ilK = 0;
                         break;
@@ -654,9 +667,10 @@ namespace OopLabProje
 
         private void comboBoxUstOgr_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+                // Üst öğrenim için seçilen seçeneğe göre katsayı değiştirilir
                 switch (comboBoxUstOgr.SelectedIndex)
                 {
+                // sıfıncı indexte seçiniz özelliği var 
                     case 1:
                         ustK = 0.10;
                         break;
@@ -673,7 +687,6 @@ namespace OopLabProje
                         ustK = 0.15;
                         break;
                     default:
-                        MessageBox.Show("Lütfen bir seçim yapın!", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         break;
 
                 
@@ -683,9 +696,10 @@ namespace OopLabProje
 
         private void comboBoxDil_SelectedIndexChanged(object sender, EventArgs e)
         {
-           
+            // Seçilen dil seçeneğine göre katsayı değiştirilir
                 switch (comboBoxDil.SelectedIndex)
                 {
+                // sıfıncı indexte seçiniz özelliği var 
                     case 1:
                         DilK = 0.20;
                         break;
@@ -703,9 +717,10 @@ namespace OopLabProje
 
         private void comboBoxYonetici_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+                // yöneticilik görevi için seçilen seçeneğe göre katsayı değiştirilir
                 switch (comboBoxYonetici.SelectedIndex)
                 {
+                // sıfıncı indexte seçiniz özelliği var 
                     case 1:
                         YonetK = 0.50;
                         break;
@@ -747,9 +762,10 @@ namespace OopLabProje
 
         private void comboBoxAile_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+                // Aile seçeneği için seçilene göre katsayı değiştirilir
                 switch (comboBoxAile.SelectedIndex)
                 {
+                // sıfıncı indexte seçiniz özelliği var 
                     case 1:
                         AileK = 0.20;
                         break;
@@ -767,12 +783,23 @@ namespace OopLabProje
                 
             }
         }
+        // akyldrmbyznr The codes for the notes section are finished.
+
+
+        // salary hesaplayan fonksiyon
+        // katsayıları comboboxta seçilen değere göre değiştildikten sonra burada kullanılır
+        // comboboxta seçim yapılmamışsa katsayı default 0 olur
         public void salary()
         {
+            // katsayılar toplamı+1
             double katsayi = AileK + YonetK + DilK + ustK + ilK + deneyimK+1;
+            // baz ücret başta kabul edilen değer
             double ucret = bazUcret;
+            //salary= (katsayılar+1)*baz ücret
             ucret*= katsayi;
+            // full time çalışma seçilirse 1, part time seçilirse 0.5 yani yarısı hesaplanır
             ucret *= calismaTuru;
+            //labela salary yazdırılır
             labelucret.Text=ucret.ToString()+" TL";
         }
 
@@ -783,7 +810,7 @@ namespace OopLabProje
 
         private void button9_Click(object sender, EventArgs e)
         {
-            bool uyarıVar = false; // En az bir uyarı gösterildiğini kontrol etmek için bir bayrak kullanıyoruz
+            bool uyarıVar = false; // En az bir uyarı gösterildiğini kontrol etmek için bir boolean kullanıyoruz
 
             if (comboBoxAile.SelectedIndex == 0 && comboBoxAile.Visible == true)
             {
@@ -844,15 +871,10 @@ namespace OopLabProje
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (comboBox1.SelectedIndex == 0 && comboBox1.Visible==true) // ComboBox'ta seçilmiş bir öğe yoksa
-            {
-                MessageBox.Show("Lütfen bir seçim yapın!", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                labelucret.Text = "   ";
-            }
-            else
-            {
+            // çalışam türü seçilir ve katsayı değeri değiştirilir
                 switch (comboBox1.SelectedIndex)
                 {
+                // sıfıncı indexte seçiniz özelliği var 
                     case 1:
                         calismaTuru = 1;
                         break;
@@ -862,11 +884,12 @@ namespace OopLabProje
                     default:
                         break;
                 }
-            }
+            
         }
 
         private void tabPage4_Enter(object sender, EventArgs e)
         {
+            // uyarıları gönderebilmek için her comboboxın 0. indexine seçiniz seçeneği koyuldu ve default o seçili görünür
           comboBox1.SelectedIndex = 0;
             comboBoxAile.SelectedIndex = 0;
             comboBoxDeneyim.SelectedIndex = 0;
@@ -890,6 +913,13 @@ namespace OopLabProje
         {
 
         }
+
+        private void groupBox3_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        //fethiyenur salary calculator kısmı bitti
     }
-    // akyldrmbyznr The codes for the notes section are finished.
+    
 }
