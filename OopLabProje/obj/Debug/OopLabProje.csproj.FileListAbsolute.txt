@@ -54,3 +54,15 @@ C:\Users\fetik\OneDrive\Masaüstü\2_bahar\ooplabbahar\oopproje\oop_proje\OopLab
 C:\Users\fetik\OneDrive\Masaüstü\2_bahar\ooplabbahar\oopproje\oop_proje\OopLabProje\obj\Debug\OopLabProje.csproj.CoreCompileInputs.cache
 C:\Users\fetik\OneDrive\Masaüstü\2_bahar\ooplabbahar\oopproje\oop_proje\OopLabProje\obj\Debug\OopLabProje.exe
 C:\Users\fetik\OneDrive\Masaüstü\2_bahar\ooplabbahar\oopproje\oop_proje\OopLabProje\obj\Debug\OopLabProje.pdb
+D:\School Git\OOP2LABProjTemp\oop_proje\OopLabProje\bin\Debug\OopLabProje.exe.config
+D:\School Git\OOP2LABProjTemp\oop_proje\OopLabProje\bin\Debug\OopLabProje.exe
+D:\School Git\OOP2LABProjTemp\oop_proje\OopLabProje\bin\Debug\OopLabProje.pdb
+D:\School Git\OOP2LABProjTemp\oop_proje\OopLabProje\obj\Debug\OopLabProje.csproj.AssemblyReference.cache
+D:\School Git\OOP2LABProjTemp\oop_proje\OopLabProje\obj\Debug\OopLabProje.csproj.SuggestedBindingRedirects.cache
+D:\School Git\OOP2LABProjTemp\oop_proje\OopLabProje\obj\Debug\OopLabProje.LoginForm.resources
+D:\School Git\OOP2LABProjTemp\oop_proje\OopLabProje\obj\Debug\OopLabProje.MainForm.resources
+D:\School Git\OOP2LABProjTemp\oop_proje\OopLabProje\obj\Debug\OopLabProje.Properties.Resources.resources
+D:\School Git\OOP2LABProjTemp\oop_proje\OopLabProje\obj\Debug\OopLabProje.csproj.GenerateResource.cache
+D:\School Git\OOP2LABProjTemp\oop_proje\OopLabProje\obj\Debug\OopLabProje.csproj.CoreCompileInputs.cache
+D:\School Git\OOP2LABProjTemp\oop_proje\OopLabProje\obj\Debug\OopLabProje.exe
+D:\School Git\OOP2LABProjTemp\oop_proje\OopLabProje\obj\Debug\OopLabProje.pdb

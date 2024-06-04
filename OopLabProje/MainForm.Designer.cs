@@ -29,17 +29,17 @@
         private void InitializeComponent()
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.tabPagePhonebook = new System.Windows.Forms.TabPage();
+            this.tbPhonebookNumber = new System.Windows.Forms.TextBox();
+            this.tbPhonebookEmail = new System.Windows.Forms.TextBox();
+            this.tbPhonebookName = new System.Windows.Forms.TextBox();
+            this.tbPhonebookSurname = new System.Windows.Forms.TextBox();
+            this.tbPhonebookAdress = new System.Windows.Forms.TextBox();
+            this.tbPhonebookDescription = new System.Windows.Forms.TextBox();
+            this.btnPhonebookDelete = new System.Windows.Forms.Button();
+            this.btnPhonebookUpdate = new System.Windows.Forms.Button();
+            this.btnPhonebookCreate = new System.Windows.Forms.Button();
+            this.btnPhonebookList = new System.Windows.Forms.Button();
             this.listBoxContacts = new System.Windows.Forms.ListBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -47,39 +47,38 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.label26 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.button22 = new System.Windows.Forms.Button();
-            this.button15 = new System.Windows.Forms.Button();
-            this.button14 = new System.Windows.Forms.Button();
-            this.button13 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.label17 = new System.Windows.Forms.Label();
-            this.textBox15 = new System.Windows.Forms.TextBox();
-            this.label16 = new System.Windows.Forms.Label();
+            this.tabPageProfile = new System.Windows.Forms.TabPage();
+            this.groupBoxPassword = new System.Windows.Forms.GroupBox();
+            this.btnPasswordCancel = new System.Windows.Forms.Button();
             this.label15 = new System.Windows.Forms.Label();
-            this.button6 = new System.Windows.Forms.Button();
-            this.textBox14 = new System.Windows.Forms.TextBox();
-            this.textBox13 = new System.Windows.Forms.TextBox();
+            this.tbProfileCurrentPassword = new System.Windows.Forms.TextBox();
+            this.tbProfileNewPassword = new System.Windows.Forms.TextBox();
+            this.btnProfilePassword = new System.Windows.Forms.Button();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.tbProfilePasswordAgain = new System.Windows.Forms.TextBox();
+            this.btnProfileChangePassword = new System.Windows.Forms.Button();
+            this.btnProfileCancel = new System.Windows.Forms.Button();
+            this.btnProfileSave = new System.Windows.Forms.Button();
+            this.btnProfilePicture = new System.Windows.Forms.Button();
             this.label14 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.tbProfileName = new System.Windows.Forms.TextBox();
+            this.tbProfileSurname = new System.Windows.Forms.TextBox();
+            this.tbProfilePhone = new System.Windows.Forms.TextBox();
+            this.tbProfileAddress = new System.Windows.Forms.TextBox();
+            this.tbProfileEmail = new System.Windows.Forms.TextBox();
+            this.pbProfilePicture = new System.Windows.Forms.PictureBox();
+            this.tabPageUserManagement = new System.Windows.Forms.TabPage();
             this.button1 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.cbUserType = new System.Windows.Forms.ComboBox();
             this.cbSelectUser = new System.Windows.Forms.ComboBox();
-            this.tabPage4notes = new System.Windows.Forms.TabPage();
+            this.tabPageNotes = new System.Windows.Forms.TabPage();
             this.label13 = new System.Windows.Forms.Label();
             this.textBoxNoteContent = new System.Windows.Forms.TextBox();
             this.listBoxNotes = new System.Windows.Forms.ListBox();
@@ -87,7 +86,7 @@
             this.btnListNote = new System.Windows.Forms.Button();
             this.btnDeleteNote = new System.Windows.Forms.Button();
             this.btnUpdateNote = new System.Windows.Forms.Button();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.tabPageSalaryCalculator = new System.Windows.Forms.TabPage();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.radioButtonYonetEvet = new System.Windows.Forms.RadioButton();
             this.radioButtonYonetHayir = new System.Windows.Forms.RadioButton();
@@ -117,12 +116,13 @@
             this.button9 = new System.Windows.Forms.Button();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.tabControl1.SuspendLayout();
-            this.tabPage1.SuspendLayout();
-            this.tabPage3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.tabPage2.SuspendLayout();
-            this.tabPage4notes.SuspendLayout();
-            this.tabPage4.SuspendLayout();
+            this.tabPagePhonebook.SuspendLayout();
+            this.tabPageProfile.SuspendLayout();
+            this.groupBoxPassword.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbProfilePicture)).BeginInit();
+            this.tabPageUserManagement.SuspendLayout();
+            this.tabPageNotes.SuspendLayout();
+            this.tabPageSalaryCalculator.SuspendLayout();
             this.groupBox6.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -133,475 +133,476 @@
             // 
             // tabControl1
             // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage3);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Controls.Add(this.tabPage4notes);
-            this.tabControl1.Controls.Add(this.tabPage4);
+            this.tabControl1.Controls.Add(this.tabPagePhonebook);
+            this.tabControl1.Controls.Add(this.tabPageProfile);
+            this.tabControl1.Controls.Add(this.tabPageUserManagement);
+            this.tabControl1.Controls.Add(this.tabPageNotes);
+            this.tabControl1.Controls.Add(this.tabPageSalaryCalculator);
             this.tabControl1.Location = new System.Drawing.Point(3, 2);
             this.tabControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(808, 455);
             this.tabControl1.TabIndex = 0;
+            this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_TabIndexChanged);
+            this.tabControl1.TabIndexChanged += new System.EventHandler(this.tabControl1_TabIndexChanged);
             // 
-            // tabPage1
+            // tabPagePhonebook
             // 
-            this.tabPage1.Controls.Add(this.textBox3);
-            this.tabPage1.Controls.Add(this.textBox6);
-            this.tabPage1.Controls.Add(this.textBox5);
-            this.tabPage1.Controls.Add(this.textBox4);
-            this.tabPage1.Controls.Add(this.textBox2);
-            this.tabPage1.Controls.Add(this.textBox1);
-            this.tabPage1.Controls.Add(this.button5);
-            this.tabPage1.Controls.Add(this.button4);
-            this.tabPage1.Controls.Add(this.button3);
-            this.tabPage1.Controls.Add(this.button2);
-            this.tabPage1.Controls.Add(this.listBoxContacts);
-            this.tabPage1.Controls.Add(this.label8);
-            this.tabPage1.Controls.Add(this.label7);
-            this.tabPage1.Controls.Add(this.label6);
-            this.tabPage1.Controls.Add(this.label5);
-            this.tabPage1.Controls.Add(this.label4);
-            this.tabPage1.Controls.Add(this.label3);
-            this.tabPage1.Location = new System.Drawing.Point(4, 25);
-            this.tabPage1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage1.Size = new System.Drawing.Size(800, 426);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Phonebook";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.tabPagePhonebook.Controls.Add(this.tbPhonebookNumber);
+            this.tabPagePhonebook.Controls.Add(this.tbPhonebookEmail);
+            this.tabPagePhonebook.Controls.Add(this.tbPhonebookName);
+            this.tabPagePhonebook.Controls.Add(this.tbPhonebookSurname);
+            this.tabPagePhonebook.Controls.Add(this.tbPhonebookAdress);
+            this.tabPagePhonebook.Controls.Add(this.tbPhonebookDescription);
+            this.tabPagePhonebook.Controls.Add(this.btnPhonebookDelete);
+            this.tabPagePhonebook.Controls.Add(this.btnPhonebookUpdate);
+            this.tabPagePhonebook.Controls.Add(this.btnPhonebookCreate);
+            this.tabPagePhonebook.Controls.Add(this.btnPhonebookList);
+            this.tabPagePhonebook.Controls.Add(this.listBoxContacts);
+            this.tabPagePhonebook.Controls.Add(this.label8);
+            this.tabPagePhonebook.Controls.Add(this.label7);
+            this.tabPagePhonebook.Controls.Add(this.label6);
+            this.tabPagePhonebook.Controls.Add(this.label5);
+            this.tabPagePhonebook.Controls.Add(this.label4);
+            this.tabPagePhonebook.Controls.Add(this.label3);
+            this.tabPagePhonebook.Location = new System.Drawing.Point(4, 25);
+            this.tabPagePhonebook.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabPagePhonebook.Name = "tabPagePhonebook";
+            this.tabPagePhonebook.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabPagePhonebook.Size = new System.Drawing.Size(800, 426);
+            this.tabPagePhonebook.TabIndex = 0;
+            this.tabPagePhonebook.Text = "Phonebook";
+            this.tabPagePhonebook.UseVisualStyleBackColor = true;
             // 
-            // textBox3
+            // tbPhonebookNumber
             // 
-            this.textBox3.Location = new System.Drawing.Point(249, 369);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 22);
-            this.textBox3.TabIndex = 22;
+            this.tbPhonebookNumber.Location = new System.Drawing.Point(262, 377);
+            this.tbPhonebookNumber.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbPhonebookNumber.Name = "tbPhonebookNumber";
+            this.tbPhonebookNumber.Size = new System.Drawing.Size(100, 22);
+            this.tbPhonebookNumber.TabIndex = 56;
             // 
-            // textBox6
+            // tbPhonebookEmail
             // 
-            this.textBox6.Location = new System.Drawing.Point(592, 369);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(100, 22);
-            this.textBox6.TabIndex = 21;
+            this.tbPhonebookEmail.Location = new System.Drawing.Point(605, 377);
+            this.tbPhonebookEmail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbPhonebookEmail.Name = "tbPhonebookEmail";
+            this.tbPhonebookEmail.Size = new System.Drawing.Size(100, 22);
+            this.tbPhonebookEmail.TabIndex = 55;
             // 
-            // textBox5
+            // tbPhonebookName
             // 
-            this.textBox5.Location = new System.Drawing.Point(17, 369);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 22);
-            this.textBox5.TabIndex = 20;
+            this.tbPhonebookName.Location = new System.Drawing.Point(30, 377);
+            this.tbPhonebookName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbPhonebookName.Name = "tbPhonebookName";
+            this.tbPhonebookName.Size = new System.Drawing.Size(100, 22);
+            this.tbPhonebookName.TabIndex = 54;
             // 
-            // textBox4
+            // tbPhonebookSurname
             // 
-            this.textBox4.Location = new System.Drawing.Point(131, 369);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 22);
-            this.textBox4.TabIndex = 19;
+            this.tbPhonebookSurname.Location = new System.Drawing.Point(144, 377);
+            this.tbPhonebookSurname.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbPhonebookSurname.Name = "tbPhonebookSurname";
+            this.tbPhonebookSurname.Size = new System.Drawing.Size(100, 22);
+            this.tbPhonebookSurname.TabIndex = 53;
             // 
-            // textBox2
+            // tbPhonebookAdress
             // 
-            this.textBox2.Location = new System.Drawing.Point(372, 369);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(87, 22);
-            this.textBox2.TabIndex = 17;
+            this.tbPhonebookAdress.Location = new System.Drawing.Point(385, 377);
+            this.tbPhonebookAdress.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbPhonebookAdress.Name = "tbPhonebookAdress";
+            this.tbPhonebookAdress.Size = new System.Drawing.Size(87, 22);
+            this.tbPhonebookAdress.TabIndex = 52;
             // 
-            // textBox1
+            // tbPhonebookDescription
             // 
-            this.textBox1.Location = new System.Drawing.Point(475, 369);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 22);
-            this.textBox1.TabIndex = 16;
+            this.tbPhonebookDescription.Location = new System.Drawing.Point(488, 377);
+            this.tbPhonebookDescription.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbPhonebookDescription.Name = "tbPhonebookDescription";
+            this.tbPhonebookDescription.Size = new System.Drawing.Size(100, 22);
+            this.tbPhonebookDescription.TabIndex = 51;
             // 
-            // button5
+            // btnPhonebookDelete
             // 
-            this.button5.Location = new System.Drawing.Point(687, 256);
-            this.button5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 23);
-            this.button5.TabIndex = 15;
-            this.button5.Text = "Delete";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.btnPhonebookDelete.Location = new System.Drawing.Point(700, 264);
+            this.btnPhonebookDelete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnPhonebookDelete.Name = "btnPhonebookDelete";
+            this.btnPhonebookDelete.Size = new System.Drawing.Size(75, 23);
+            this.btnPhonebookDelete.TabIndex = 50;
+            this.btnPhonebookDelete.Text = "Delete";
+            this.btnPhonebookDelete.UseVisualStyleBackColor = true;
+            this.btnPhonebookDelete.Click += new System.EventHandler(this.ContactsDelete);
             // 
-            // button4
+            // btnPhonebookUpdate
             // 
-            this.button4.Location = new System.Drawing.Point(687, 199);
-            this.button4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 14;
-            this.button4.Text = "Update";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.btnPhonebookUpdate.Location = new System.Drawing.Point(700, 207);
+            this.btnPhonebookUpdate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnPhonebookUpdate.Name = "btnPhonebookUpdate";
+            this.btnPhonebookUpdate.Size = new System.Drawing.Size(75, 23);
+            this.btnPhonebookUpdate.TabIndex = 49;
+            this.btnPhonebookUpdate.Text = "Update";
+            this.btnPhonebookUpdate.UseVisualStyleBackColor = true;
+            this.btnPhonebookUpdate.Click += new System.EventHandler(this.ContactsUpdate);
             // 
-            // button3
+            // btnPhonebookCreate
             // 
-            this.button3.Location = new System.Drawing.Point(687, 135);
-            this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 13;
-            this.button3.Text = "Create";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.btnPhonebookCreate.Location = new System.Drawing.Point(700, 143);
+            this.btnPhonebookCreate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnPhonebookCreate.Name = "btnPhonebookCreate";
+            this.btnPhonebookCreate.Size = new System.Drawing.Size(75, 23);
+            this.btnPhonebookCreate.TabIndex = 48;
+            this.btnPhonebookCreate.Text = "Create";
+            this.btnPhonebookCreate.UseVisualStyleBackColor = true;
+            this.btnPhonebookCreate.Click += new System.EventHandler(this.ContactsNew);
             // 
-            // button2
+            // btnPhonebookList
             // 
-            this.button2.Location = new System.Drawing.Point(687, 68);
-            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 12;
-            this.button2.Text = "List";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.btnListContacts_Click);
+            this.btnPhonebookList.Location = new System.Drawing.Point(700, 76);
+            this.btnPhonebookList.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnPhonebookList.Name = "btnPhonebookList";
+            this.btnPhonebookList.Size = new System.Drawing.Size(75, 23);
+            this.btnPhonebookList.TabIndex = 47;
+            this.btnPhonebookList.Text = "List";
+            this.btnPhonebookList.UseVisualStyleBackColor = true;
+            this.btnPhonebookList.Click += new System.EventHandler(this.btnListContacts_Click);
             // 
             // listBoxContacts
             // 
             this.listBoxContacts.FormattingEnabled = true;
             this.listBoxContacts.ItemHeight = 16;
-            this.listBoxContacts.Location = new System.Drawing.Point(17, 20);
+            this.listBoxContacts.Location = new System.Drawing.Point(30, 28);
             this.listBoxContacts.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.listBoxContacts.Name = "listBoxContacts";
             this.listBoxContacts.Size = new System.Drawing.Size(664, 308);
-            this.listBoxContacts.TabIndex = 7;
-            this.listBoxContacts.SelectedIndexChanged += new System.EventHandler(this.listBoxContacts_SelectedIndexChanged);
+            this.listBoxContacts.TabIndex = 46;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(601, 350);
+            this.label8.Location = new System.Drawing.Point(614, 358);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(44, 16);
-            this.label8.TabIndex = 5;
+            this.label8.TabIndex = 45;
             this.label8.Text = "e-mail";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(481, 350);
+            this.label7.Location = new System.Drawing.Point(494, 358);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(73, 16);
-            this.label7.TabIndex = 4;
+            this.label7.TabIndex = 44;
             this.label7.Text = "description";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(379, 350);
+            this.label6.Location = new System.Drawing.Point(392, 358);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(58, 16);
-            this.label6.TabIndex = 3;
+            this.label6.TabIndex = 43;
             this.label6.Text = "Address";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(255, 350);
+            this.label5.Location = new System.Drawing.Point(268, 358);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(94, 16);
-            this.label5.TabIndex = 2;
+            this.label5.TabIndex = 42;
             this.label5.Text = "PhoneNumber";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(136, 350);
+            this.label4.Location = new System.Drawing.Point(149, 358);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(59, 16);
-            this.label4.TabIndex = 1;
+            this.label4.TabIndex = 41;
             this.label4.Text = "surname";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(13, 350);
+            this.label3.Location = new System.Drawing.Point(26, 358);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(41, 16);
-            this.label3.TabIndex = 0;
+            this.label3.TabIndex = 40;
             this.label3.Text = "name";
             // 
-            // tabPage3
+            // tabPageProfile
             // 
-            this.tabPage3.Controls.Add(this.label26);
-            this.tabPage3.Controls.Add(this.textBox8);
-            this.tabPage3.Controls.Add(this.button22);
-            this.tabPage3.Controls.Add(this.button15);
-            this.tabPage3.Controls.Add(this.button14);
-            this.tabPage3.Controls.Add(this.button13);
-            this.tabPage3.Controls.Add(this.button7);
-            this.tabPage3.Controls.Add(this.label17);
-            this.tabPage3.Controls.Add(this.textBox15);
-            this.tabPage3.Controls.Add(this.label16);
-            this.tabPage3.Controls.Add(this.label15);
-            this.tabPage3.Controls.Add(this.button6);
-            this.tabPage3.Controls.Add(this.textBox14);
-            this.tabPage3.Controls.Add(this.textBox13);
-            this.tabPage3.Controls.Add(this.label14);
-            this.tabPage3.Controls.Add(this.label12);
-            this.tabPage3.Controls.Add(this.label11);
-            this.tabPage3.Controls.Add(this.label10);
-            this.tabPage3.Controls.Add(this.label9);
-            this.tabPage3.Controls.Add(this.textBox12);
-            this.tabPage3.Controls.Add(this.textBox11);
-            this.tabPage3.Controls.Add(this.textBox10);
-            this.tabPage3.Controls.Add(this.textBox9);
-            this.tabPage3.Controls.Add(this.textBox7);
-            this.tabPage3.Controls.Add(this.pictureBox1);
-            this.tabPage3.Location = new System.Drawing.Point(4, 25);
-            this.tabPage3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(800, 426);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Profile";
-            this.tabPage3.UseVisualStyleBackColor = true;
-            this.tabPage3.Click += new System.EventHandler(this.tabPage3_Click);
+            this.tabPageProfile.Controls.Add(this.groupBoxPassword);
+            this.tabPageProfile.Controls.Add(this.btnProfileChangePassword);
+            this.tabPageProfile.Controls.Add(this.btnProfileCancel);
+            this.tabPageProfile.Controls.Add(this.btnProfileSave);
+            this.tabPageProfile.Controls.Add(this.btnProfilePicture);
+            this.tabPageProfile.Controls.Add(this.label14);
+            this.tabPageProfile.Controls.Add(this.label12);
+            this.tabPageProfile.Controls.Add(this.label11);
+            this.tabPageProfile.Controls.Add(this.label10);
+            this.tabPageProfile.Controls.Add(this.label9);
+            this.tabPageProfile.Controls.Add(this.tbProfileName);
+            this.tabPageProfile.Controls.Add(this.tbProfileSurname);
+            this.tabPageProfile.Controls.Add(this.tbProfilePhone);
+            this.tabPageProfile.Controls.Add(this.tbProfileAddress);
+            this.tabPageProfile.Controls.Add(this.tbProfileEmail);
+            this.tabPageProfile.Controls.Add(this.pbProfilePicture);
+            this.tabPageProfile.Location = new System.Drawing.Point(4, 25);
+            this.tabPageProfile.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabPageProfile.Name = "tabPageProfile";
+            this.tabPageProfile.Size = new System.Drawing.Size(800, 426);
+            this.tabPageProfile.TabIndex = 2;
+            this.tabPageProfile.Text = "Profile";
+            this.tabPageProfile.UseVisualStyleBackColor = true;
             // 
-            // label26
+            // groupBoxPassword
             // 
-            this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(80, 373);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(49, 16);
-            this.label26.TabIndex = 37;
-            this.label26.Text = "Salary:";
+            this.groupBoxPassword.Controls.Add(this.btnPasswordCancel);
+            this.groupBoxPassword.Controls.Add(this.label15);
+            this.groupBoxPassword.Controls.Add(this.tbProfileCurrentPassword);
+            this.groupBoxPassword.Controls.Add(this.tbProfileNewPassword);
+            this.groupBoxPassword.Controls.Add(this.btnProfilePassword);
+            this.groupBoxPassword.Controls.Add(this.label16);
+            this.groupBoxPassword.Controls.Add(this.label17);
+            this.groupBoxPassword.Controls.Add(this.tbProfilePasswordAgain);
+            this.groupBoxPassword.Location = new System.Drawing.Point(442, 121);
+            this.groupBoxPassword.Name = "groupBoxPassword";
+            this.groupBoxPassword.Size = new System.Drawing.Size(315, 207);
+            this.groupBoxPassword.TabIndex = 72;
+            this.groupBoxPassword.TabStop = false;
+            this.groupBoxPassword.Text = "Change Password";
+            this.groupBoxPassword.Visible = false;
             // 
-            // textBox8
+            // btnPasswordCancel
             // 
-            this.textBox8.Location = new System.Drawing.Point(148, 367);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(100, 22);
-            this.textBox8.TabIndex = 36;
-            // 
-            // button22
-            // 
-            this.button22.Location = new System.Drawing.Point(284, 321);
-            this.button22.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button22.Name = "button22";
-            this.button22.Size = new System.Drawing.Size(75, 23);
-            this.button22.TabIndex = 35;
-            this.button22.Text = "change";
-            this.button22.UseVisualStyleBackColor = true;
-            // 
-            // button15
-            // 
-            this.button15.Location = new System.Drawing.Point(284, 241);
-            this.button15.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(75, 23);
-            this.button15.TabIndex = 28;
-            this.button15.Text = "change";
-            this.button15.UseVisualStyleBackColor = true;
-            // 
-            // button14
-            // 
-            this.button14.Location = new System.Drawing.Point(284, 279);
-            this.button14.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(75, 23);
-            this.button14.TabIndex = 27;
-            this.button14.Text = "change";
-            this.button14.UseVisualStyleBackColor = true;
-            // 
-            // button13
-            // 
-            this.button13.Location = new System.Drawing.Point(284, 199);
-            this.button13.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(75, 23);
-            this.button13.TabIndex = 26;
-            this.button13.Text = "change";
-            this.button13.UseVisualStyleBackColor = true;
-            // 
-            // button7
-            // 
-            this.button7.Location = new System.Drawing.Point(284, 153);
-            this.button7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(75, 23);
-            this.button7.TabIndex = 20;
-            this.button7.Text = "change";
-            this.button7.UseVisualStyleBackColor = true;
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(415, 290);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(130, 16);
-            this.label17.TabIndex = 19;
-            this.label17.Text = "new password again";
-            // 
-            // textBox15
-            // 
-            this.textBox15.Location = new System.Drawing.Point(561, 288);
-            this.textBox15.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(100, 22);
-            this.textBox15.TabIndex = 18;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(444, 250);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(93, 16);
-            this.label16.TabIndex = 17;
-            this.label16.Text = "new password";
+            this.btnPasswordCancel.Location = new System.Drawing.Point(118, 171);
+            this.btnPasswordCancel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnPasswordCancel.Name = "btnPasswordCancel";
+            this.btnPasswordCancel.Size = new System.Drawing.Size(75, 25);
+            this.btnPasswordCancel.TabIndex = 20;
+            this.btnPasswordCancel.Text = "Cancel";
+            this.btnPasswordCancel.UseVisualStyleBackColor = true;
+            this.btnPasswordCancel.Click += new System.EventHandler(this.btnPasswordCancel_Click);
             // 
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(444, 194);
+            this.label15.Location = new System.Drawing.Point(67, 33);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(109, 16);
             this.label15.TabIndex = 16;
             this.label15.Text = "current password";
             // 
-            // button6
+            // tbProfileCurrentPassword
             // 
-            this.button6.Location = new System.Drawing.Point(587, 332);
-            this.button6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(75, 23);
-            this.button6.TabIndex = 15;
-            this.button6.Text = "button6";
-            this.button6.UseVisualStyleBackColor = true;
+            this.tbProfileCurrentPassword.Location = new System.Drawing.Point(184, 33);
+            this.tbProfileCurrentPassword.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbProfileCurrentPassword.Name = "tbProfileCurrentPassword";
+            this.tbProfileCurrentPassword.PasswordChar = '*';
+            this.tbProfileCurrentPassword.Size = new System.Drawing.Size(100, 22);
+            this.tbProfileCurrentPassword.TabIndex = 13;
             // 
-            // textBox14
+            // tbProfileNewPassword
             // 
-            this.textBox14.Location = new System.Drawing.Point(561, 244);
-            this.textBox14.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(100, 22);
-            this.textBox14.TabIndex = 14;
+            this.tbProfileNewPassword.Location = new System.Drawing.Point(184, 83);
+            this.tbProfileNewPassword.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbProfileNewPassword.Name = "tbProfileNewPassword";
+            this.tbProfileNewPassword.PasswordChar = '*';
+            this.tbProfileNewPassword.Size = new System.Drawing.Size(100, 22);
+            this.tbProfileNewPassword.TabIndex = 14;
             // 
-            // textBox13
+            // btnProfilePassword
             // 
-            this.textBox13.Location = new System.Drawing.Point(561, 194);
-            this.textBox13.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(100, 22);
-            this.textBox13.TabIndex = 13;
+            this.btnProfilePassword.Location = new System.Drawing.Point(210, 171);
+            this.btnProfilePassword.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnProfilePassword.Name = "btnProfilePassword";
+            this.btnProfilePassword.Size = new System.Drawing.Size(75, 25);
+            this.btnProfilePassword.TabIndex = 15;
+            this.btnProfilePassword.Text = "Change";
+            this.btnProfilePassword.UseVisualStyleBackColor = true;
+            this.btnProfilePassword.Click += new System.EventHandler(this.btnProfilePassword_Click);
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(67, 89);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(93, 16);
+            this.label16.TabIndex = 17;
+            this.label16.Text = "new password";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(38, 129);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(130, 16);
+            this.label17.TabIndex = 19;
+            this.label17.Text = "new password again";
+            // 
+            // tbProfilePasswordAgain
+            // 
+            this.tbProfilePasswordAgain.Location = new System.Drawing.Point(184, 127);
+            this.tbProfilePasswordAgain.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbProfilePasswordAgain.Name = "tbProfilePasswordAgain";
+            this.tbProfilePasswordAgain.PasswordChar = '*';
+            this.tbProfilePasswordAgain.Size = new System.Drawing.Size(100, 22);
+            this.tbProfilePasswordAgain.TabIndex = 18;
+            // 
+            // btnProfileChangePassword
+            // 
+            this.btnProfileChangePassword.Location = new System.Drawing.Point(626, 131);
+            this.btnProfileChangePassword.Name = "btnProfileChangePassword";
+            this.btnProfileChangePassword.Size = new System.Drawing.Size(129, 34);
+            this.btnProfileChangePassword.TabIndex = 71;
+            this.btnProfileChangePassword.Text = "Change Password";
+            this.btnProfileChangePassword.UseVisualStyleBackColor = true;
+            this.btnProfileChangePassword.Click += new System.EventHandler(this.btnProfileChangePassword_Click);
+            // 
+            // btnProfileCancel
+            // 
+            this.btnProfileCancel.Location = new System.Drawing.Point(513, 357);
+            this.btnProfileCancel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnProfileCancel.Name = "btnProfileCancel";
+            this.btnProfileCancel.Size = new System.Drawing.Size(116, 45);
+            this.btnProfileCancel.TabIndex = 70;
+            this.btnProfileCancel.Text = "Cancel Changes";
+            this.btnProfileCancel.UseVisualStyleBackColor = true;
+            this.btnProfileCancel.Click += new System.EventHandler(this.btnProfileCancel_Click);
+            // 
+            // btnProfileSave
+            // 
+            this.btnProfileSave.Location = new System.Drawing.Point(641, 357);
+            this.btnProfileSave.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnProfileSave.Name = "btnProfileSave";
+            this.btnProfileSave.Size = new System.Drawing.Size(116, 45);
+            this.btnProfileSave.TabIndex = 69;
+            this.btnProfileSave.Text = "Save Changes";
+            this.btnProfileSave.UseVisualStyleBackColor = true;
+            this.btnProfileSave.Click += new System.EventHandler(this.btnProfileSave_Click);
+            // 
+            // btnProfilePicture
+            // 
+            this.btnProfilePicture.Location = new System.Drawing.Point(43, 118);
+            this.btnProfilePicture.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnProfilePicture.Name = "btnProfilePicture";
+            this.btnProfilePicture.Size = new System.Drawing.Size(75, 23);
+            this.btnProfilePicture.TabIndex = 68;
+            this.btnProfilePicture.Text = "change";
+            this.btnProfilePicture.UseVisualStyleBackColor = true;
+            this.btnProfilePicture.Click += new System.EventHandler(this.btnProfilePicture_Click);
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(85, 325);
+            this.label14.Location = new System.Drawing.Point(176, 309);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(44, 16);
-            this.label14.TabIndex = 12;
+            this.label14.TabIndex = 67;
             this.label14.Text = "e-mail";
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(73, 282);
+            this.label12.Location = new System.Drawing.Point(164, 266);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(57, 16);
-            this.label12.TabIndex = 10;
+            this.label12.TabIndex = 66;
             this.label12.Text = "address";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(36, 244);
+            this.label11.Location = new System.Drawing.Point(127, 228);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(96, 16);
-            this.label11.TabIndex = 9;
+            this.label11.TabIndex = 65;
             this.label11.Text = " phone number";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(73, 198);
+            this.label10.Location = new System.Drawing.Point(164, 182);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(59, 16);
-            this.label10.TabIndex = 8;
+            this.label10.TabIndex = 64;
             this.label10.Text = "surname";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(89, 153);
+            this.label9.Location = new System.Drawing.Point(180, 137);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(41, 16);
-            this.label9.TabIndex = 7;
+            this.label9.TabIndex = 63;
             this.label9.Text = "name";
             // 
-            // textBox12
+            // tbProfileName
             // 
-            this.textBox12.Location = new System.Drawing.Point(148, 153);
-            this.textBox12.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(100, 22);
-            this.textBox12.TabIndex = 6;
+            this.tbProfileName.Location = new System.Drawing.Point(239, 137);
+            this.tbProfileName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbProfileName.Name = "tbProfileName";
+            this.tbProfileName.Size = new System.Drawing.Size(100, 22);
+            this.tbProfileName.TabIndex = 62;
             // 
-            // textBox11
+            // tbProfileSurname
             // 
-            this.textBox11.Location = new System.Drawing.Point(148, 199);
-            this.textBox11.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(100, 22);
-            this.textBox11.TabIndex = 5;
+            this.tbProfileSurname.Location = new System.Drawing.Point(239, 183);
+            this.tbProfileSurname.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbProfileSurname.Name = "tbProfileSurname";
+            this.tbProfileSurname.Size = new System.Drawing.Size(100, 22);
+            this.tbProfileSurname.TabIndex = 61;
             // 
-            // textBox10
+            // tbProfilePhone
             // 
-            this.textBox10.Location = new System.Drawing.Point(148, 241);
-            this.textBox10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(100, 22);
-            this.textBox10.TabIndex = 4;
+            this.tbProfilePhone.Location = new System.Drawing.Point(239, 225);
+            this.tbProfilePhone.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbProfilePhone.Name = "tbProfilePhone";
+            this.tbProfilePhone.Size = new System.Drawing.Size(100, 22);
+            this.tbProfilePhone.TabIndex = 60;
             // 
-            // textBox9
+            // tbProfileAddress
             // 
-            this.textBox9.Location = new System.Drawing.Point(148, 282);
-            this.textBox9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(100, 22);
-            this.textBox9.TabIndex = 3;
+            this.tbProfileAddress.Location = new System.Drawing.Point(239, 266);
+            this.tbProfileAddress.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbProfileAddress.Name = "tbProfileAddress";
+            this.tbProfileAddress.Size = new System.Drawing.Size(100, 22);
+            this.tbProfileAddress.TabIndex = 59;
             // 
-            // textBox7
+            // tbProfileEmail
             // 
-            this.textBox7.Location = new System.Drawing.Point(148, 322);
-            this.textBox7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(100, 22);
-            this.textBox7.TabIndex = 1;
+            this.tbProfileEmail.Location = new System.Drawing.Point(239, 306);
+            this.tbProfileEmail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbProfileEmail.Name = "tbProfileEmail";
+            this.tbProfileEmail.Size = new System.Drawing.Size(100, 22);
+            this.tbProfileEmail.TabIndex = 58;
             // 
-            // pictureBox1
+            // pbProfilePicture
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(25, 16);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(89, 90);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.pbProfilePicture.Location = new System.Drawing.Point(43, 24);
+            this.pbProfilePicture.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pbProfilePicture.Name = "pbProfilePicture";
+            this.pbProfilePicture.Size = new System.Drawing.Size(89, 90);
+            this.pbProfilePicture.TabIndex = 57;
+            this.pbProfilePicture.TabStop = false;
             // 
-            // tabPage2
+            // tabPageUserManagement
             // 
-            this.tabPage2.Controls.Add(this.button1);
-            this.tabPage2.Controls.Add(this.label2);
-            this.tabPage2.Controls.Add(this.label1);
-            this.tabPage2.Controls.Add(this.cbUserType);
-            this.tabPage2.Controls.Add(this.cbSelectUser);
-            this.tabPage2.Location = new System.Drawing.Point(4, 25);
-            this.tabPage2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage2.Size = new System.Drawing.Size(800, 426);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "User Management";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.tabPageUserManagement.Controls.Add(this.button1);
+            this.tabPageUserManagement.Controls.Add(this.label2);
+            this.tabPageUserManagement.Controls.Add(this.label1);
+            this.tabPageUserManagement.Controls.Add(this.cbUserType);
+            this.tabPageUserManagement.Controls.Add(this.cbSelectUser);
+            this.tabPageUserManagement.Location = new System.Drawing.Point(4, 25);
+            this.tabPageUserManagement.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabPageUserManagement.Name = "tabPageUserManagement";
+            this.tabPageUserManagement.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabPageUserManagement.Size = new System.Drawing.Size(800, 426);
+            this.tabPageUserManagement.TabIndex = 1;
+            this.tabPageUserManagement.Text = "User Management";
+            this.tabPageUserManagement.UseVisualStyleBackColor = true;
             // 
             // button1
             // 
@@ -655,23 +656,23 @@
             this.cbSelectUser.TabIndex = 0;
             this.cbSelectUser.SelectedIndexChanged += new System.EventHandler(this.cbSelectUser_SelectedIndexChanged);
             // 
-            // tabPage4notes
+            // tabPageNotes
             // 
-            this.tabPage4notes.Controls.Add(this.label13);
-            this.tabPage4notes.Controls.Add(this.textBoxNoteContent);
-            this.tabPage4notes.Controls.Add(this.listBoxNotes);
-            this.tabPage4notes.Controls.Add(this.btnAddNote);
-            this.tabPage4notes.Controls.Add(this.btnListNote);
-            this.tabPage4notes.Controls.Add(this.btnDeleteNote);
-            this.tabPage4notes.Controls.Add(this.btnUpdateNote);
-            this.tabPage4notes.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tabPage4notes.Location = new System.Drawing.Point(4, 25);
-            this.tabPage4notes.Margin = new System.Windows.Forms.Padding(4);
-            this.tabPage4notes.Name = "tabPage4notes";
-            this.tabPage4notes.Size = new System.Drawing.Size(800, 426);
-            this.tabPage4notes.TabIndex = 3;
-            this.tabPage4notes.Text = "Notes";
-            this.tabPage4notes.UseVisualStyleBackColor = true;
+            this.tabPageNotes.Controls.Add(this.label13);
+            this.tabPageNotes.Controls.Add(this.textBoxNoteContent);
+            this.tabPageNotes.Controls.Add(this.listBoxNotes);
+            this.tabPageNotes.Controls.Add(this.btnAddNote);
+            this.tabPageNotes.Controls.Add(this.btnListNote);
+            this.tabPageNotes.Controls.Add(this.btnDeleteNote);
+            this.tabPageNotes.Controls.Add(this.btnUpdateNote);
+            this.tabPageNotes.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tabPageNotes.Location = new System.Drawing.Point(4, 25);
+            this.tabPageNotes.Margin = new System.Windows.Forms.Padding(4);
+            this.tabPageNotes.Name = "tabPageNotes";
+            this.tabPageNotes.Size = new System.Drawing.Size(800, 426);
+            this.tabPageNotes.TabIndex = 3;
+            this.tabPageNotes.Text = "Notes";
+            this.tabPageNotes.UseVisualStyleBackColor = true;
             // 
             // label13
             // 
@@ -752,27 +753,27 @@
             this.btnUpdateNote.UseVisualStyleBackColor = false;
             this.btnUpdateNote.Click += new System.EventHandler(this.btnUpdateNote_Click);
             // 
-            // tabPage4
+            // tabPageSalaryCalculator
             // 
-            this.tabPage4.Controls.Add(this.groupBox6);
-            this.tabPage4.Controls.Add(this.groupBox5);
-            this.tabPage4.Controls.Add(this.groupBox4);
-            this.tabPage4.Controls.Add(this.groupBox3);
-            this.tabPage4.Controls.Add(this.groupBox2);
-            this.tabPage4.Controls.Add(this.groupBox1);
-            this.tabPage4.Controls.Add(this.comboBox1);
-            this.tabPage4.Controls.Add(this.labelucret);
-            this.tabPage4.Controls.Add(this.label25);
-            this.tabPage4.Controls.Add(this.label24);
-            this.tabPage4.Controls.Add(this.button9);
-            this.tabPage4.Location = new System.Drawing.Point(4, 25);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(800, 426);
-            this.tabPage4.TabIndex = 4;
-            this.tabPage4.Text = "Salary Calculator";
-            this.tabPage4.UseVisualStyleBackColor = true;
-            this.tabPage4.Click += new System.EventHandler(this.tabPage4_Click);
-            this.tabPage4.Enter += new System.EventHandler(this.tabPage4_Enter);
+            this.tabPageSalaryCalculator.Controls.Add(this.groupBox6);
+            this.tabPageSalaryCalculator.Controls.Add(this.groupBox5);
+            this.tabPageSalaryCalculator.Controls.Add(this.groupBox4);
+            this.tabPageSalaryCalculator.Controls.Add(this.groupBox3);
+            this.tabPageSalaryCalculator.Controls.Add(this.groupBox2);
+            this.tabPageSalaryCalculator.Controls.Add(this.groupBox1);
+            this.tabPageSalaryCalculator.Controls.Add(this.comboBox1);
+            this.tabPageSalaryCalculator.Controls.Add(this.labelucret);
+            this.tabPageSalaryCalculator.Controls.Add(this.label25);
+            this.tabPageSalaryCalculator.Controls.Add(this.label24);
+            this.tabPageSalaryCalculator.Controls.Add(this.button9);
+            this.tabPageSalaryCalculator.Location = new System.Drawing.Point(4, 25);
+            this.tabPageSalaryCalculator.Name = "tabPageSalaryCalculator";
+            this.tabPageSalaryCalculator.Size = new System.Drawing.Size(800, 426);
+            this.tabPageSalaryCalculator.TabIndex = 4;
+            this.tabPageSalaryCalculator.Text = "Salary Calculator";
+            this.tabPageSalaryCalculator.UseVisualStyleBackColor = true;
+            this.tabPageSalaryCalculator.Click += new System.EventHandler(this.tabPage4_Click);
+            this.tabPageSalaryCalculator.Enter += new System.EventHandler(this.tabPage4_Enter);
             // 
             // groupBox6
             // 
@@ -1221,18 +1222,21 @@
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainForm";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MainForm_FormClosed);
             this.tabControl1.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
-            this.tabPage1.PerformLayout();
-            this.tabPage3.ResumeLayout(false);
-            this.tabPage3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.tabPage2.ResumeLayout(false);
-            this.tabPage2.PerformLayout();
-            this.tabPage4notes.ResumeLayout(false);
-            this.tabPage4notes.PerformLayout();
-            this.tabPage4.ResumeLayout(false);
-            this.tabPage4.PerformLayout();
+            this.tabPagePhonebook.ResumeLayout(false);
+            this.tabPagePhonebook.PerformLayout();
+            this.tabPageProfile.ResumeLayout(false);
+            this.tabPageProfile.PerformLayout();
+            this.groupBoxPassword.ResumeLayout(false);
+            this.groupBoxPassword.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbProfilePicture)).EndInit();
+            this.tabPageUserManagement.ResumeLayout(false);
+            this.tabPageUserManagement.PerformLayout();
+            this.tabPageNotes.ResumeLayout(false);
+            this.tabPageNotes.PerformLayout();
+            this.tabPageSalaryCalculator.ResumeLayout(false);
+            this.tabPageSalaryCalculator.PerformLayout();
             this.groupBox6.ResumeLayout(false);
             this.groupBox6.PerformLayout();
             this.groupBox5.ResumeLayout(false);
@@ -1251,55 +1255,15 @@
         #endregion
 
         private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.TabPage tabPagePhonebook;
+        private System.Windows.Forms.TabPage tabPageUserManagement;
         private System.Windows.Forms.ComboBox cbSelectUser;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cbUserType;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ListBox listBoxContacts;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox12;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.TextBox textBox15;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.TextBox textBox14;
-        private System.Windows.Forms.TextBox textBox13;
-        private System.Windows.Forms.Button button22;
-        private System.Windows.Forms.Button button15;
-        private System.Windows.Forms.Button button14;
-        private System.Windows.Forms.Button button13;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.TabPage tabPage4notes;
+        private System.Windows.Forms.TabPage tabPageProfile;
+        private System.Windows.Forms.TabPage tabPageNotes;
         private System.Windows.Forms.Button btnDeleteNote;
         private System.Windows.Forms.Button btnUpdateNote;
         private System.Windows.Forms.Button btnListNote;
@@ -1307,7 +1271,7 @@
         private System.Windows.Forms.ListBox listBoxNotes;
         private System.Windows.Forms.TextBox textBoxNoteContent;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TabPage tabPage4;
+        private System.Windows.Forms.TabPage tabPageSalaryCalculator;
         private System.Windows.Forms.ComboBox comboBoxAile;
         private System.Windows.Forms.ComboBox comboBoxYonetici;
         private System.Windows.Forms.ComboBox comboBoxDil;
@@ -1330,13 +1294,52 @@
         private System.Windows.Forms.Label labelucret;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.GroupBox groupBox6;
+        private System.Windows.Forms.GroupBox groupBoxPassword;
+        private System.Windows.Forms.Button btnPasswordCancel;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.TextBox tbProfileCurrentPassword;
+        private System.Windows.Forms.TextBox tbProfileNewPassword;
+        private System.Windows.Forms.Button btnProfilePassword;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.TextBox tbProfilePasswordAgain;
+        private System.Windows.Forms.Button btnProfileChangePassword;
+        private System.Windows.Forms.Button btnProfileCancel;
+        private System.Windows.Forms.Button btnProfileSave;
+        private System.Windows.Forms.Button btnProfilePicture;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox tbProfileName;
+        private System.Windows.Forms.TextBox tbProfileSurname;
+        private System.Windows.Forms.TextBox tbProfilePhone;
+        private System.Windows.Forms.TextBox tbProfileAddress;
+        private System.Windows.Forms.TextBox tbProfileEmail;
+        private System.Windows.Forms.PictureBox pbProfilePicture;
+        private System.Windows.Forms.TextBox tbPhonebookNumber;
+        private System.Windows.Forms.TextBox tbPhonebookEmail;
+        private System.Windows.Forms.TextBox tbPhonebookName;
+        private System.Windows.Forms.TextBox tbPhonebookSurname;
+        private System.Windows.Forms.TextBox tbPhonebookAdress;
+        private System.Windows.Forms.TextBox tbPhonebookDescription;
+        private System.Windows.Forms.Button btnPhonebookDelete;
+        private System.Windows.Forms.Button btnPhonebookUpdate;
+        private System.Windows.Forms.Button btnPhonebookCreate;
+        private System.Windows.Forms.Button btnPhonebookList;
+        private System.Windows.Forms.ListBox listBoxContacts;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
     }
 }

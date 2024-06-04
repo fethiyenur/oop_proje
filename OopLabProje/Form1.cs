@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Text.RegularExpressions;
 using static OopLabProje.LoginForm;
 
 namespace OopLabProje
@@ -24,6 +25,22 @@ namespace OopLabProje
             public string Username { get; set; }
             public string Password { get; set; }
             public UserType UserType { get; set; }
+
+            public PersonalInformation PersonalInfo { get; set; }
+
+        }
+        public class PersonalInformation
+        {
+            public string Username { get; set; }
+            public string Name { get; set; }
+            public string Surname { get; set; }
+            public string Email { get; set; }
+            public string Phone { get; set; }
+            public string Address { get; set; }
+
+            //Profile picture as base64 image string
+            public string ProfilePicture { get; set; }
+
         }
 
 
@@ -56,20 +73,44 @@ namespace OopLabProje
         {
             try
             {
-                
-                string filePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "OopLabProje", "users.txt"); // !proje adi degisirse degistir
+
+                string filePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "OopLabProje", "users.csv"); // !proje adi degisirse degistir
                 if (File.Exists(filePath))
                 {
-                    // Read user data from the file (CSV format assumed)
-                    return File.ReadAllLines(filePath)
-                        .Select(line => line.Split(','))
-                        .Select(parts => new User
-                        {
-                            Username = parts[0],
-                            Password = parts[1],
-                            UserType = (UserType)Enum.Parse(typeof(UserType), parts[2])
-                        })
-                        .ToList();
+                    //Find the PersonalInformations from file then assign them to the users
+                    string filePath2 = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "OopLabProje", "PersonalInformation.csv");
+                    if (File.Exists(filePath2))
+                    {
+                        var personalInfos = File.ReadAllLines(filePath2)
+                            .Select(line => line.Split(','))
+                            .Select(parts => new PersonalInformation
+                            {
+                                Username = parts[0],
+                                Name = parts[1],
+                                Surname = parts[2],
+                                Email = parts[3],
+                                Phone = parts[4],
+                                Address = parts[5],
+
+                            })
+                            .ToList();
+
+                        return File.ReadAllLines(filePath)
+                            .Select(line => line.Split(','))
+                            .Select(parts => new User
+                            {
+                                Username = parts[0],
+                                Password = parts[1],
+                                UserType = (UserType)Enum.Parse(typeof(UserType), parts[2]),
+                                PersonalInfo = personalInfos.FirstOrDefault(p => p.Username == parts[0])
+                            })
+                            .ToList();
+                    }
+                    else
+                    {
+                        MessageBox.Show("PersonalInformation file not found.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+
                 }
             }
             catch (Exception ex)
@@ -85,11 +126,16 @@ namespace OopLabProje
         {
             try
             {
-                string filePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "OopLabProje", "users.txt");
-                Directory.CreateDirectory(Path.GetDirectoryName(filePath));
-
                 // Save user data to the file (CSV format)
+                string filePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "OopLabProje", "users.csv");
+                Directory.CreateDirectory(Path.GetDirectoryName(filePath));
                 File.WriteAllLines(filePath, users.Select(u => $"{u.Username},{u.Password},{u.UserType}"));
+
+
+                // Save user PersonalInformation to the file (CSV format)
+                filePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "OopLabProje", "PersonalInformation.csv");
+                Directory.CreateDirectory(Path.GetDirectoryName(filePath));
+                File.WriteAllLines(filePath, users.Select(u => $"{u.PersonalInfo.Username},{u.PersonalInfo.Name},{u.PersonalInfo.Surname},{u.PersonalInfo.Email},{u.PersonalInfo.Phone},{u.PersonalInfo.Address},{u.PersonalInfo.ProfilePicture}"));
             }
             catch (Exception ex)
             {
@@ -171,18 +217,70 @@ namespace OopLabProje
                 return;
             }
 
-            if(newPassword != txtNewPasswordVerify.Text)
+            if (newPassword != txtNewPasswordVerify.Text)
             {
                 MessageBox.Show("Passwords do not match. Please verify the password.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
+            //Check if the personal information is valid using regular expressions
+            if (!Regex.IsMatch(tbName.Text, @"^[a-zA-Z]+$"))
+            {
+                MessageBox.Show("Name is not valid. Please enter a valid name.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            //Surname
+            if (!Regex.IsMatch(tbSurname.Text, @"^[a-zA-Z]+$"))
+            {
+                MessageBox.Show("Surname is not valid. Please enter a valid surname.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            //Email
+            if (!Regex.IsMatch(tbEmail.Text, @"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$"))
+            {
+                MessageBox.Show("Email is not valid. Please enter a valid email.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            else
+            {
+                //Check if the email is already registered
+                if (users.Any(u => u.PersonalInfo.Email == tbEmail.Text))
+                {
+                    MessageBox.Show("Email is already registered. Please enter a different email.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+            }
+            //Phone
+            if (!Regex.IsMatch(tbPhone.Text, @"^(\d{10})$"))
+            {
+                MessageBox.Show("Phone number is not valid. Please enter a valid phone number.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            //Address
+            if (!Regex.IsMatch(tbAddress.Text, @"^[a-zA-Z0-9\s,.'-]{3,}$"))
+            {
+                MessageBox.Show("Address is not valid. Please enter a valid address.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+
             // Create a new user and add to the list
+            var newPersonalInfo = new PersonalInformation
+            {
+                Username = newUsername,
+                Name = tbName.Text,
+                Surname = tbSurname.Text,
+                Email = tbEmail.Text,
+                Phone = tbPhone.Text,
+                Address = tbAddress.Text,
+                ProfilePicture = "R0lGODlhAQABAIAAAAAAAAAAACH5BAAAAAAALAAAAAABAAEAAAICTAEAOw==" // Default profile picture
+            };
             var newUser = new User
             {
                 Username = newUsername,
                 Password = newPassword,
-                UserType = users.Count == 0 ? UserType.Admin : UserType.NormalUser // First user is admin
+                UserType = users.Count == 0 ? UserType.Admin : UserType.NormalUser, // First user is admin
+                PersonalInfo = newPersonalInfo
             };
             users.Add(newUser);
 
@@ -207,6 +305,25 @@ namespace OopLabProje
                 File.Create(filePath).Close();
             }
         }
-    }   
+
+
+        //Register operations
+        private void btnRegister_Click_1(object sender, EventArgs e)
+        {
+            //Show register groupbox and hide login groupbox
+            groupBoxRegister.Visible = true;
+            groupBoxLogin.Visible = false;
+
+        }
+
+        private void btnReturn_Click(object sender, EventArgs e)
+        {
+            //Show login groupbox and hide register groupbox
+            groupBoxRegister.Visible = false;
+            groupBoxLogin.Visible = true;
+        }
+
+
+    }
 }
 
