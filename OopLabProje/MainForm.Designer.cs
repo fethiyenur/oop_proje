@@ -114,7 +114,7 @@
             this.label25 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
             this.button9 = new System.Windows.Forms.Button();
-            this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.tabPageReminder = new System.Windows.Forms.TabPage();
             this.label20 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
@@ -142,25 +142,17 @@
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            this.tabPage5.SuspendLayout();
+            this.tabPageReminder.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
             // 
-<<<<<<< HEAD
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage3);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Controls.Add(this.tabPage4notes);
-            this.tabControl1.Controls.Add(this.tabPage4);
-            this.tabControl1.Controls.Add(this.tabPage5);
-=======
             this.tabControl1.Controls.Add(this.tabPagePhonebook);
             this.tabControl1.Controls.Add(this.tabPageProfile);
             this.tabControl1.Controls.Add(this.tabPageUserManagement);
             this.tabControl1.Controls.Add(this.tabPageNotes);
             this.tabControl1.Controls.Add(this.tabPageSalaryCalculator);
->>>>>>> 15dd8ffb97e8deec4c90faf0fcd922eae4cc8ce4
+            this.tabControl1.Controls.Add(this.tabPageReminder);
             this.tabControl1.Location = new System.Drawing.Point(3, 2);
             this.tabControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabControl1.Name = "tabControl1";
@@ -299,6 +291,7 @@
             this.listBoxContacts.Name = "listBoxContacts";
             this.listBoxContacts.Size = new System.Drawing.Size(664, 308);
             this.listBoxContacts.TabIndex = 46;
+            this.listBoxContacts.SelectedIndexChanged += new System.EventHandler(this.listBoxContacts_SelectedIndexChanged);
             // 
             // label8
             // 
@@ -390,7 +383,7 @@
             this.groupBoxPassword.Controls.Add(this.label16);
             this.groupBoxPassword.Controls.Add(this.label17);
             this.groupBoxPassword.Controls.Add(this.tbProfilePasswordAgain);
-            this.groupBoxPassword.Location = new System.Drawing.Point(442, 121);
+            this.groupBoxPassword.Location = new System.Drawing.Point(442, 125);
             this.groupBoxPassword.Name = "groupBoxPassword";
             this.groupBoxPassword.Size = new System.Drawing.Size(315, 207);
             this.groupBoxPassword.TabIndex = 72;
@@ -476,7 +469,7 @@
             // 
             // btnProfileChangePassword
             // 
-            this.btnProfileChangePassword.Location = new System.Drawing.Point(626, 131);
+            this.btnProfileChangePassword.Location = new System.Drawing.Point(622, 125);
             this.btnProfileChangePassword.Name = "btnProfileChangePassword";
             this.btnProfileChangePassword.Size = new System.Drawing.Size(129, 34);
             this.btnProfileChangePassword.TabIndex = 71;
@@ -1235,26 +1228,26 @@
             this.button9.UseVisualStyleBackColor = false;
             this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
-            // tabPage5
+            // tabPageReminder
             // 
-            this.tabPage5.Controls.Add(this.label20);
-            this.tabPage5.Controls.Add(this.label19);
-            this.tabPage5.Controls.Add(this.label18);
-            this.tabPage5.Controls.Add(this.btnShowReminder);
-            this.tabPage5.Controls.Add(this.btnDelete);
-            this.tabPage5.Controls.Add(this.btnUpdate);
-            this.tabPage5.Controls.Add(this.btnAddReminder);
-            this.tabPage5.Controls.Add(this.dateTimePickerReminder);
-            this.tabPage5.Controls.Add(this.comboBoxReminderType);
-            this.tabPage5.Controls.Add(this.textBoxReminderSummary);
-            this.tabPage5.Controls.Add(this.textBoxReminderDescription);
-            this.tabPage5.Controls.Add(this.listBoxReminders);
-            this.tabPage5.Location = new System.Drawing.Point(4, 25);
-            this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Size = new System.Drawing.Size(800, 426);
-            this.tabPage5.TabIndex = 5;
-            this.tabPage5.Text = "Reminder";
-            this.tabPage5.UseVisualStyleBackColor = true;
+            this.tabPageReminder.Controls.Add(this.label20);
+            this.tabPageReminder.Controls.Add(this.label19);
+            this.tabPageReminder.Controls.Add(this.label18);
+            this.tabPageReminder.Controls.Add(this.btnShowReminder);
+            this.tabPageReminder.Controls.Add(this.btnDelete);
+            this.tabPageReminder.Controls.Add(this.btnUpdate);
+            this.tabPageReminder.Controls.Add(this.btnAddReminder);
+            this.tabPageReminder.Controls.Add(this.dateTimePickerReminder);
+            this.tabPageReminder.Controls.Add(this.comboBoxReminderType);
+            this.tabPageReminder.Controls.Add(this.textBoxReminderSummary);
+            this.tabPageReminder.Controls.Add(this.textBoxReminderDescription);
+            this.tabPageReminder.Controls.Add(this.listBoxReminders);
+            this.tabPageReminder.Location = new System.Drawing.Point(4, 25);
+            this.tabPageReminder.Name = "tabPageReminder";
+            this.tabPageReminder.Size = new System.Drawing.Size(800, 426);
+            this.tabPageReminder.TabIndex = 5;
+            this.tabPageReminder.Text = "Reminder";
+            this.tabPageReminder.UseVisualStyleBackColor = true;
             // 
             // label20
             // 
@@ -1398,8 +1391,8 @@
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.tabPage5.ResumeLayout(false);
-            this.tabPage5.PerformLayout();
+            this.tabPageReminder.ResumeLayout(false);
+            this.tabPageReminder.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1452,8 +1445,7 @@
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.GroupBox groupBox6;
-<<<<<<< HEAD
-        private System.Windows.Forms.TabPage tabPage5;
+        private System.Windows.Forms.TabPage tabPageReminder;
         private System.Windows.Forms.TextBox textBoxReminderSummary;
         private System.Windows.Forms.TextBox textBoxReminderDescription;
         private System.Windows.Forms.ListBox listBoxReminders;
@@ -1466,7 +1458,6 @@
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label18;
-=======
         private System.Windows.Forms.GroupBox groupBoxPassword;
         private System.Windows.Forms.Button btnPasswordCancel;
         private System.Windows.Forms.Label label15;
@@ -1508,6 +1499,5 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
->>>>>>> 15dd8ffb97e8deec4c90faf0fcd922eae4cc8ce4
     }
 }

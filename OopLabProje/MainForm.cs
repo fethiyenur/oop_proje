@@ -20,7 +20,7 @@ namespace OopLabProje
     {
         private List<string> notes; // A list for taking notes  akyldrmbyznr
         
-        private List<Reminder> reminders; // for reminder  akyldrmbyznr 
+        private List<Reminder> reminders = new List<Reminder>(); // for reminder  akyldrmbyznr 
         public MainForm()
         {
 
@@ -48,6 +48,10 @@ namespace OopLabProje
             //Notes 
             notes = new List<string>();   //akyldrmbyznr
             LoadNotesFromFile();          //akyldrmbyznr
+
+            //Reminder
+            comboBoxReminderType.Items.Add(ReminderType.Meeting);
+            comboBoxReminderType.Items.Add(ReminderType.Task);
         }
 
 
@@ -57,10 +61,16 @@ namespace OopLabProje
         }
 
 
-        //Seperate into classes
-        private class UserManagement
+        private void tabControl1_TabIndexChanged(object sender, EventArgs e)
         {
-
+            if (tabControl1.SelectedTab == tabPageProfile)
+            {
+                LoadUserInfo();
+            }
+            if (tabControl1.SelectedTab == tabPageSalaryCalculator)
+            {
+                tabPage4_Enter(null, null);
+            }
         }
 
 
@@ -367,15 +377,8 @@ namespace OopLabProje
 
 
         //Personal Information Start
-        PersonalInformation currentUserPersonalInformation = new PersonalInformation();
 
-        private void tabControl1_TabIndexChanged(object sender, EventArgs e)
-        {
-            if (tabControl1.SelectedTab == tabPageProfile)
-            {
-                LoadUserInfo();
-            }
-        }
+        PersonalInformation currentUserPersonalInformation = new PersonalInformation();
 
         //Add ctrl-z / ctrl-y functionality to the textboxes
         private void tbProfileName_KeyDown(object sender, KeyEventArgs e)
@@ -1110,13 +1113,36 @@ namespace OopLabProje
         private void tabPage4_Enter(object sender, EventArgs e)
         {
             // uyarıları gönderebilmek için her comboboxın 0. indexine seçiniz seçeneği koyuldu ve default o seçili görünür
-          comboBox1.SelectedIndex = 0;
-            comboBoxAile.SelectedIndex = 0;
-            comboBoxDeneyim.SelectedIndex = 0;
-            comboBoxDil.SelectedIndex = 0;
-            comboBoxIl.SelectedIndex = 0;
-            comboBoxUstOgr.SelectedIndex = 0;
-            comboBoxYonetici.SelectedIndex = 0;
+
+            //if selected indexes are null, the default value is selected
+            if (comboBox1.SelectedIndex == -1)
+            {
+                comboBox1.SelectedIndex = 0;
+            }
+            if (comboBoxAile.SelectedIndex == -1)
+            {
+                comboBoxAile.SelectedIndex = 0;
+            }
+            if (comboBoxDeneyim.SelectedIndex == -1)
+            {
+                comboBoxDeneyim.SelectedIndex = 0;
+            }
+            if (comboBoxDil.SelectedIndex == -1)
+            {
+                comboBoxDil.SelectedIndex = 0;
+            }
+            if (comboBoxIl.SelectedIndex == -1)
+            {
+                comboBoxIl.SelectedIndex = 0;
+            }
+            if (comboBoxUstOgr.SelectedIndex == -1)
+            {
+                comboBoxUstOgr.SelectedIndex = 0;
+            }
+            if (comboBoxYonetici.SelectedIndex == -1)
+            {
+                comboBoxYonetici.SelectedIndex = 0;
+            }
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
@@ -1138,11 +1164,6 @@ namespace OopLabProje
         {
 
         }
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 15dd8ffb97e8deec4c90faf0fcd922eae4cc8ce4
         //fethiyenur salary calculator kısmı bitti
 
         private void listBoxReminders_SelectedIndexChanged(object sender, EventArgs e)
