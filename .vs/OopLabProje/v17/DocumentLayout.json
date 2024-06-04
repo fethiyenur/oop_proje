@@ -1,12 +1,85 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\fetik\\OneDrive\\Masa\u00FCst\u00FC\\2_bahar\\ooplabbahar\\Yeni klas\u00F6r\\oop_proje\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\fetik\\AppData\\Local\\Temp\\4bd1b229-6146-4ee0-831e-2905445a231f_OopLabProje sonhali.zip.31f\\OopLabProje\\OopLabProje\\MainForm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B269CACF-453C-4311-8F3F-9B4FE1EA67B6}|OopLabProje\\OopLabProje.csproj|c:\\users\\fetik\\onedrive\\masa\u00FCst\u00FC\\2_bahar\\ooplabbahar\\yeni klas\u00F6r\\oop_proje\\ooplabproje\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B269CACF-453C-4311-8F3F-9B4FE1EA67B6}|OopLabProje\\OopLabProje.csproj|solutionrelative:ooplabproje\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\fetik\\AppData\\Local\\Temp\\797b07bf-c916-4d99-880b-ad7044fca7bd_OopLabProje sonhali.zip.7bd\\OopLabProje\\OopLabProje\\MainForm.Designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\fetik\\AppData\\Local\\Temp\\c1246c36-bd1e-4c05-8714-3be2d0709c78_OopLabProje sonhali.zip.c78\\OopLabProje\\OopLabProje\\Form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainForm.cs",
+              "DocumentMoniker": "C:\\Users\\fetik\\OneDrive\\Masa\u00FCst\u00FC\\2_bahar\\ooplabbahar\\Yeni klas\u00F6r\\oop_proje\\OopLabProje\\MainForm.cs",
+              "RelativeDocumentMoniker": "OopLabProje\\MainForm.cs",
+              "ToolTip": "C:\\Users\\fetik\\OneDrive\\Masa\u00FCst\u00FC\\2_bahar\\ooplabbahar\\Yeni klas\u00F6r\\oop_proje\\OopLabProje\\MainForm.cs",
+              "RelativeToolTip": "OopLabProje\\MainForm.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-04T11:40:19.56Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\fetik\\AppData\\Local\\Temp\\c1246c36-bd1e-4c05-8714-3be2d0709c78_OopLabProje sonhali.zip.c78\\OopLabProje\\OopLabProje\\Form1.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\AppData\\Local\\Temp\\c1246c36-bd1e-4c05-8714-3be2d0709c78_OopLabProje sonhali.zip.c78\\OopLabProje\\OopLabProje\\Form1.cs",
+              "ToolTip": "C:\\Users\\fetik\\AppData\\Local\\Temp\\c1246c36-bd1e-4c05-8714-3be2d0709c78_OopLabProje sonhali.zip.c78\\OopLabProje\\OopLabProje\\Form1.cs[Salt Okunur]",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\AppData\\Local\\Temp\\c1246c36-bd1e-4c05-8714-3be2d0709c78_OopLabProje sonhali.zip.c78\\OopLabProje\\OopLabProje\\Form1.cs[Salt Okunur]",
+              "ViewState": "AQIAALkAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-04T10:53:49.014Z",
+              "EditorCaption": "[Salt Okunur]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MainForm.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\fetik\\AppData\\Local\\Temp\\797b07bf-c916-4d99-880b-ad7044fca7bd_OopLabProje sonhali.zip.7bd\\OopLabProje\\OopLabProje\\MainForm.Designer.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\AppData\\Local\\Temp\\797b07bf-c916-4d99-880b-ad7044fca7bd_OopLabProje sonhali.zip.7bd\\OopLabProje\\OopLabProje\\MainForm.Designer.cs",
+              "ToolTip": "C:\\Users\\fetik\\AppData\\Local\\Temp\\797b07bf-c916-4d99-880b-ad7044fca7bd_OopLabProje sonhali.zip.7bd\\OopLabProje\\OopLabProje\\MainForm.Designer.cs[Salt Okunur]",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\AppData\\Local\\Temp\\797b07bf-c916-4d99-880b-ad7044fca7bd_OopLabProje sonhali.zip.7bd\\OopLabProje\\OopLabProje\\MainForm.Designer.cs[Salt Okunur]",
+              "ViewState": "AQIAAKEDAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-04T10:53:36.31Z",
+              "EditorCaption": "[Salt Okunur]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainForm.cs",
+              "DocumentMoniker": "C:\\Users\\fetik\\AppData\\Local\\Temp\\4bd1b229-6146-4ee0-831e-2905445a231f_OopLabProje sonhali.zip.31f\\OopLabProje\\OopLabProje\\MainForm.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\AppData\\Local\\Temp\\4bd1b229-6146-4ee0-831e-2905445a231f_OopLabProje sonhali.zip.31f\\OopLabProje\\OopLabProje\\MainForm.cs",
+              "ToolTip": "C:\\Users\\fetik\\AppData\\Local\\Temp\\4bd1b229-6146-4ee0-831e-2905445a231f_OopLabProje sonhali.zip.31f\\OopLabProje\\OopLabProje\\MainForm.cs*",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\AppData\\Local\\Temp\\4bd1b229-6146-4ee0-831e-2905445a231f_OopLabProje sonhali.zip.31f\\OopLabProje\\OopLabProje\\MainForm.cs*",
+              "ViewState": "AQIAAN0BAAAAAAAAAAAAAOUBAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-04T10:53:20.495Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }

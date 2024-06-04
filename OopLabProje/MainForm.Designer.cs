@@ -115,6 +115,19 @@
             this.label25 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
             this.button9 = new System.Windows.Forms.Button();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.btnShowReminder = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.btnUpdate = new System.Windows.Forms.Button();
+            this.btnAddReminder = new System.Windows.Forms.Button();
+            this.dateTimePickerReminder = new System.Windows.Forms.DateTimePicker();
+            this.comboBoxReminderType = new System.Windows.Forms.ComboBox();
+            this.textBoxReminderSummary = new System.Windows.Forms.TextBox();
+            this.textBoxReminderDescription = new System.Windows.Forms.TextBox();
+            this.listBoxReminders = new System.Windows.Forms.ListBox();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -129,6 +142,7 @@
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.tabPage5.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -138,6 +152,7 @@
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage4notes);
             this.tabControl1.Controls.Add(this.tabPage4);
+            this.tabControl1.Controls.Add(this.tabPage5);
             this.tabControl1.Location = new System.Drawing.Point(3, 2);
             this.tabControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabControl1.Name = "tabControl1";
@@ -1211,6 +1226,133 @@
             this.button9.UseVisualStyleBackColor = false;
             this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
+            // tabPage5
+            // 
+            this.tabPage5.Controls.Add(this.label20);
+            this.tabPage5.Controls.Add(this.label19);
+            this.tabPage5.Controls.Add(this.label18);
+            this.tabPage5.Controls.Add(this.btnShowReminder);
+            this.tabPage5.Controls.Add(this.btnDelete);
+            this.tabPage5.Controls.Add(this.btnUpdate);
+            this.tabPage5.Controls.Add(this.btnAddReminder);
+            this.tabPage5.Controls.Add(this.dateTimePickerReminder);
+            this.tabPage5.Controls.Add(this.comboBoxReminderType);
+            this.tabPage5.Controls.Add(this.textBoxReminderSummary);
+            this.tabPage5.Controls.Add(this.textBoxReminderDescription);
+            this.tabPage5.Controls.Add(this.listBoxReminders);
+            this.tabPage5.Location = new System.Drawing.Point(4, 25);
+            this.tabPage5.Name = "tabPage5";
+            this.tabPage5.Size = new System.Drawing.Size(800, 426);
+            this.tabPage5.TabIndex = 5;
+            this.tabPage5.Text = "Reminder";
+            this.tabPage5.UseVisualStyleBackColor = true;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(496, 167);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(39, 16);
+            this.label20.TabIndex = 11;
+            this.label20.Text = "Type";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(496, 103);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(75, 16);
+            this.label19.TabIndex = 10;
+            this.label19.Text = "Description";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(496, 42);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(64, 16);
+            this.label18.TabIndex = 9;
+            this.label18.Text = "Summary";
+            // 
+            // btnShowReminder
+            // 
+            this.btnShowReminder.Location = new System.Drawing.Point(676, 361);
+            this.btnShowReminder.Name = "btnShowReminder";
+            this.btnShowReminder.Size = new System.Drawing.Size(100, 28);
+            this.btnShowReminder.TabIndex = 8;
+            this.btnShowReminder.Text = "Show";
+            this.btnShowReminder.UseVisualStyleBackColor = true;
+            this.btnShowReminder.Click += new System.EventHandler(this.btnShowReminder_Click);
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.Location = new System.Drawing.Point(500, 361);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(100, 28);
+            this.btnDelete.TabIndex = 7;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.Location = new System.Drawing.Point(676, 294);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(100, 28);
+            this.btnUpdate.TabIndex = 6;
+            this.btnUpdate.Text = "Update";
+            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            // 
+            // btnAddReminder
+            // 
+            this.btnAddReminder.Location = new System.Drawing.Point(500, 294);
+            this.btnAddReminder.Name = "btnAddReminder";
+            this.btnAddReminder.Size = new System.Drawing.Size(100, 28);
+            this.btnAddReminder.TabIndex = 5;
+            this.btnAddReminder.Text = "Add";
+            this.btnAddReminder.UseVisualStyleBackColor = true;
+            this.btnAddReminder.Click += new System.EventHandler(this.btnAddReminder_Click);
+            // 
+            // dateTimePickerReminder
+            // 
+            this.dateTimePickerReminder.Location = new System.Drawing.Point(500, 238);
+            this.dateTimePickerReminder.Name = "dateTimePickerReminder";
+            this.dateTimePickerReminder.Size = new System.Drawing.Size(275, 22);
+            this.dateTimePickerReminder.TabIndex = 4;
+            // 
+            // comboBoxReminderType
+            // 
+            this.comboBoxReminderType.FormattingEnabled = true;
+            this.comboBoxReminderType.Location = new System.Drawing.Point(500, 187);
+            this.comboBoxReminderType.Name = "comboBoxReminderType";
+            this.comboBoxReminderType.Size = new System.Drawing.Size(275, 24);
+            this.comboBoxReminderType.TabIndex = 3;
+            // 
+            // textBoxReminderSummary
+            // 
+            this.textBoxReminderSummary.Location = new System.Drawing.Point(500, 62);
+            this.textBoxReminderSummary.Name = "textBoxReminderSummary";
+            this.textBoxReminderSummary.Size = new System.Drawing.Size(275, 22);
+            this.textBoxReminderSummary.TabIndex = 2;
+            // 
+            // textBoxReminderDescription
+            // 
+            this.textBoxReminderDescription.Location = new System.Drawing.Point(500, 123);
+            this.textBoxReminderDescription.Name = "textBoxReminderDescription";
+            this.textBoxReminderDescription.Size = new System.Drawing.Size(275, 22);
+            this.textBoxReminderDescription.TabIndex = 1;
+            // 
+            // listBoxReminders
+            // 
+            this.listBoxReminders.FormattingEnabled = true;
+            this.listBoxReminders.ItemHeight = 16;
+            this.listBoxReminders.Location = new System.Drawing.Point(28, 17);
+            this.listBoxReminders.Name = "listBoxReminders";
+            this.listBoxReminders.Size = new System.Drawing.Size(441, 372);
+            this.listBoxReminders.TabIndex = 0;
+            this.listBoxReminders.SelectedIndexChanged += new System.EventHandler(this.listBoxReminders_SelectedIndexChanged);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1244,6 +1386,8 @@
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.tabPage5.ResumeLayout(false);
+            this.tabPage5.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1338,5 +1482,18 @@
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.GroupBox groupBox6;
+        private System.Windows.Forms.TabPage tabPage5;
+        private System.Windows.Forms.TextBox textBoxReminderSummary;
+        private System.Windows.Forms.TextBox textBoxReminderDescription;
+        private System.Windows.Forms.ListBox listBoxReminders;
+        private System.Windows.Forms.Button btnShowReminder;
+        private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Button btnUpdate;
+        private System.Windows.Forms.Button btnAddReminder;
+        private System.Windows.Forms.DateTimePicker dateTimePickerReminder;
+        private System.Windows.Forms.ComboBox comboBoxReminderType;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label18;
     }
 }

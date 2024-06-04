@@ -54,3 +54,14 @@ C:\Users\fetik\OneDrive\Masaüstü\2_bahar\ooplabbahar\oopproje\oop_proje\OopLab
 C:\Users\fetik\OneDrive\Masaüstü\2_bahar\ooplabbahar\oopproje\oop_proje\OopLabProje\obj\Debug\OopLabProje.csproj.CoreCompileInputs.cache
 C:\Users\fetik\OneDrive\Masaüstü\2_bahar\ooplabbahar\oopproje\oop_proje\OopLabProje\obj\Debug\OopLabProje.exe
 C:\Users\fetik\OneDrive\Masaüstü\2_bahar\ooplabbahar\oopproje\oop_proje\OopLabProje\obj\Debug\OopLabProje.pdb
+C:\Users\fetik\OneDrive\Masaüstü\2_bahar\ooplabbahar\Yeni klasör\oop_proje\OopLabProje\bin\Debug\OopLabProje.exe.config
+C:\Users\fetik\OneDrive\Masaüstü\2_bahar\ooplabbahar\Yeni klasör\oop_proje\OopLabProje\bin\Debug\OopLabProje.exe
+C:\Users\fetik\OneDrive\Masaüstü\2_bahar\ooplabbahar\Yeni klasör\oop_proje\OopLabProje\bin\Debug\OopLabProje.pdb
+C:\Users\fetik\OneDrive\Masaüstü\2_bahar\ooplabbahar\Yeni klasör\oop_proje\OopLabProje\obj\Debug\OopLabProje.csproj.AssemblyReference.cache
+C:\Users\fetik\OneDrive\Masaüstü\2_bahar\ooplabbahar\Yeni klasör\oop_proje\OopLabProje\obj\Debug\OopLabProje.LoginForm.resources
+C:\Users\fetik\OneDrive\Masaüstü\2_bahar\ooplabbahar\Yeni klasör\oop_proje\OopLabProje\obj\Debug\OopLabProje.MainForm.resources
+C:\Users\fetik\OneDrive\Masaüstü\2_bahar\ooplabbahar\Yeni klasör\oop_proje\OopLabProje\obj\Debug\OopLabProje.Properties.Resources.resources
+C:\Users\fetik\OneDrive\Masaüstü\2_bahar\ooplabbahar\Yeni klasör\oop_proje\OopLabProje\obj\Debug\OopLabProje.csproj.GenerateResource.cache
+C:\Users\fetik\OneDrive\Masaüstü\2_bahar\ooplabbahar\Yeni klasör\oop_proje\OopLabProje\obj\Debug\OopLabProje.csproj.CoreCompileInputs.cache
+C:\Users\fetik\OneDrive\Masaüstü\2_bahar\ooplabbahar\Yeni klasör\oop_proje\OopLabProje\obj\Debug\OopLabProje.exe
+C:\Users\fetik\OneDrive\Masaüstü\2_bahar\ooplabbahar\Yeni klasör\oop_proje\OopLabProje\obj\Debug\OopLabProje.pdb
