@@ -78,7 +78,7 @@
             this.groupBoxRegister.Controls.Add(this.txtNewPasswordVerify);
             this.groupBoxRegister.Controls.Add(this.label3);
             this.groupBoxRegister.Controls.Add(this.label4);
-            this.groupBoxRegister.Location = new System.Drawing.Point(79, 50);
+            this.groupBoxRegister.Location = new System.Drawing.Point(92, 51);
             this.groupBoxRegister.Name = "groupBoxRegister";
             this.groupBoxRegister.Size = new System.Drawing.Size(636, 349);
             this.groupBoxRegister.TabIndex = 15;
@@ -196,7 +196,7 @@
             this.btnRegisterConfirm.TabIndex = 5;
             this.btnRegisterConfirm.Text = "Register";
             this.btnRegisterConfirm.UseVisualStyleBackColor = true;
-            this.btnRegisterConfirm.Click += new System.EventHandler(this.btnRegister_Click_1);
+            this.btnRegisterConfirm.Click += new System.EventHandler(this.btnRegister_Click);
             // 
             // label5
             // 
@@ -264,7 +264,7 @@
             this.btnRegister.TabIndex = 5;
             this.btnRegister.Text = "Register";
             this.btnRegister.UseVisualStyleBackColor = true;
-            this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
+            this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click_1);
             // 
             // txtUsername
             // 
