@@ -54,6 +54,7 @@ C:\Users\fetik\OneDrive\Masaüstü\2_bahar\ooplabbahar\oopproje\oop_proje\OopLab
 C:\Users\fetik\OneDrive\Masaüstü\2_bahar\ooplabbahar\oopproje\oop_proje\OopLabProje\obj\Debug\OopLabProje.csproj.CoreCompileInputs.cache
 C:\Users\fetik\OneDrive\Masaüstü\2_bahar\ooplabbahar\oopproje\oop_proje\OopLabProje\obj\Debug\OopLabProje.exe
 C:\Users\fetik\OneDrive\Masaüstü\2_bahar\ooplabbahar\oopproje\oop_proje\OopLabProje\obj\Debug\OopLabProje.pdb
+<<<<<<< HEAD
 C:\Users\fetik\OneDrive\Masaüstü\2_bahar\ooplabbahar\Yeni klasör\oop_proje\OopLabProje\bin\Debug\OopLabProje.exe.config
 C:\Users\fetik\OneDrive\Masaüstü\2_bahar\ooplabbahar\Yeni klasör\oop_proje\OopLabProje\bin\Debug\OopLabProje.exe
 C:\Users\fetik\OneDrive\Masaüstü\2_bahar\ooplabbahar\Yeni klasör\oop_proje\OopLabProje\bin\Debug\OopLabProje.pdb
@@ -65,3 +66,17 @@ C:\Users\fetik\OneDrive\Masaüstü\2_bahar\ooplabbahar\Yeni klasör\oop_proje\Oo
 C:\Users\fetik\OneDrive\Masaüstü\2_bahar\ooplabbahar\Yeni klasör\oop_proje\OopLabProje\obj\Debug\OopLabProje.csproj.CoreCompileInputs.cache
 C:\Users\fetik\OneDrive\Masaüstü\2_bahar\ooplabbahar\Yeni klasör\oop_proje\OopLabProje\obj\Debug\OopLabProje.exe
 C:\Users\fetik\OneDrive\Masaüstü\2_bahar\ooplabbahar\Yeni klasör\oop_proje\OopLabProje\obj\Debug\OopLabProje.pdb
+=======
+D:\School Git\OOP2LABProjTemp\oop_proje\OopLabProje\bin\Debug\OopLabProje.exe.config
+D:\School Git\OOP2LABProjTemp\oop_proje\OopLabProje\bin\Debug\OopLabProje.exe
+D:\School Git\OOP2LABProjTemp\oop_proje\OopLabProje\bin\Debug\OopLabProje.pdb
+D:\School Git\OOP2LABProjTemp\oop_proje\OopLabProje\obj\Debug\OopLabProje.csproj.AssemblyReference.cache
+D:\School Git\OOP2LABProjTemp\oop_proje\OopLabProje\obj\Debug\OopLabProje.csproj.SuggestedBindingRedirects.cache
+D:\School Git\OOP2LABProjTemp\oop_proje\OopLabProje\obj\Debug\OopLabProje.LoginForm.resources
+D:\School Git\OOP2LABProjTemp\oop_proje\OopLabProje\obj\Debug\OopLabProje.MainForm.resources
+D:\School Git\OOP2LABProjTemp\oop_proje\OopLabProje\obj\Debug\OopLabProje.Properties.Resources.resources
+D:\School Git\OOP2LABProjTemp\oop_proje\OopLabProje\obj\Debug\OopLabProje.csproj.GenerateResource.cache
+D:\School Git\OOP2LABProjTemp\oop_proje\OopLabProje\obj\Debug\OopLabProje.csproj.CoreCompileInputs.cache
+D:\School Git\OOP2LABProjTemp\oop_proje\OopLabProje\obj\Debug\OopLabProje.exe
+D:\School Git\OOP2LABProjTemp\oop_proje\OopLabProje\obj\Debug\OopLabProje.pdb
+>>>>>>> 15dd8ffb97e8deec4c90faf0fcd922eae4cc8ce4

@@ -8,6 +8,7 @@ using System.IO;
 using System.Linq;
 using System.Net;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static OopLabProje.LoginForm;
@@ -22,12 +23,15 @@ namespace OopLabProje
         private List<Reminder> reminders; // for reminder  akyldrmbyznr 
         public MainForm()
         {
+
+            //Test 
+
             InitializeComponent();
 
             //Hide tabpage2 if user is not admin
             if (LoginForm.currentUser.UserType != LoginForm.UserType.Admin)
             {
-                tabControl1.TabPages.Remove(tabPage2);
+                tabControl1.TabPages.Remove(tabPageUserManagement);
             }
             else
             {
@@ -46,11 +50,19 @@ namespace OopLabProje
             LoadNotesFromFile();          //akyldrmbyznr
         }
 
+
+        private void MainForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            LoginForm.Instance.Close();
+        }
+
+
         //Seperate into classes
         private class UserManagement
         {
 
         }
+
 
         private void FillUserComboBox()
         {
@@ -182,8 +194,8 @@ namespace OopLabProje
                 Directory.CreateDirectory(path);
             }
 
-            //if Contacts.txt does not exist, create it
-            string filePath = Path.Combine(path, "Contacts.txt");
+            //if Contacts.csv does not exist, create it
+            string filePath = Path.Combine(path, "Contacts.csv");
             if (!File.Exists(filePath))
             {
                 File.Create(filePath).Close();
@@ -202,7 +214,7 @@ namespace OopLabProje
             }
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void ContactsNew(object sender, EventArgs e)
         {
             if (!ValidateInputs())
             {
@@ -211,12 +223,12 @@ namespace OopLabProje
 
             Contact contact = new Contact
             {
-                Name = textBox5.Text,
-                Surname = textBox4.Text,
-                PhoneNumber = textBox3.Text,
-                Address = textBox2.Text,
-                Description = textBox1.Text,
-                Email = textBox6.Text
+                Name = tbPhonebookName.Text,
+                Surname = tbPhonebookSurname.Text,
+                PhoneNumber = tbPhonebookNumber.Text,
+                Address = tbPhonebookAdress.Text,
+                Description = tbPhonebookDescription.Text,
+                Email = tbPhonebookEmail.Text
             };
             contacts.Add(contact);
 
@@ -225,7 +237,7 @@ namespace OopLabProje
 
         }
 
-        private void button5_Click(object sender, EventArgs e)
+        private void ContactsDelete(object sender, EventArgs e)
         {
             if (listBoxContacts.SelectedIndex == -1)
             {
@@ -238,7 +250,7 @@ namespace OopLabProje
             DeleteContact(tempContact);
         }
 
-        void DeleteContact(Contact contact) 
+        void DeleteContact(Contact contact)
         {
 
             // Specify the email address to delete
@@ -264,7 +276,7 @@ namespace OopLabProje
 
         void RefreshContacts()
         {
-            string path = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "OopLabProje", "Contacts.txt");
+            string path = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "OopLabProje", "Contacts.csv");
             File.WriteAllText(path, string.Empty);
             SaveContactsToFile(path);
             contacts.Clear();
@@ -272,7 +284,7 @@ namespace OopLabProje
             btnListContacts_Click(null, null);
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void ContactsUpdate(object sender, EventArgs e)
         {
             if (listBoxContacts.SelectedIndex == -1)
             {
@@ -292,12 +304,12 @@ namespace OopLabProje
         {
             Contact contact = new Contact
             {
-                Name = textBox5.Text,
-                Surname = textBox4.Text,
-                PhoneNumber = textBox3.Text,
-                Address = textBox2.Text,
-                Description = textBox1.Text,
-                Email = textBox6.Text
+                Name = tbPhonebookName.Text,
+                Surname = tbPhonebookSurname.Text,
+                PhoneNumber = tbPhonebookNumber.Text,
+                Address = tbPhonebookAdress.Text,
+                Description = tbPhonebookDescription.Text,
+                Email = tbPhonebookEmail.Text
             };
             contacts[index] = contact;
 
@@ -306,39 +318,44 @@ namespace OopLabProje
 
         private void listBoxContacts_SelectedIndexChanged(object sender, EventArgs e)
         {
-            textBox5.Text = contacts[listBoxContacts.SelectedIndex].Name;
-            textBox4.Text = contacts[listBoxContacts.SelectedIndex].Surname;
-            textBox3.Text = contacts[listBoxContacts.SelectedIndex].PhoneNumber;
-            textBox2.Text = contacts[listBoxContacts.SelectedIndex].Address;
-            textBox1.Text = contacts[listBoxContacts.SelectedIndex].Description;
-            textBox6.Text = contacts[listBoxContacts.SelectedIndex].Email;
+            if (listBoxContacts.SelectedIndex == -1)
+            {
+                return;
+            }
+
+            tbPhonebookName.Text = contacts[listBoxContacts.SelectedIndex].Name;
+            tbPhonebookSurname.Text = contacts[listBoxContacts.SelectedIndex].Surname;
+            tbPhonebookNumber.Text = contacts[listBoxContacts.SelectedIndex].PhoneNumber;
+            tbPhonebookAdress.Text = contacts[listBoxContacts.SelectedIndex].Address;
+            tbPhonebookDescription.Text = contacts[listBoxContacts.SelectedIndex].Description;
+            tbPhonebookEmail.Text = contacts[listBoxContacts.SelectedIndex].Email;
         }
 
         bool ValidateInputs()
         {
-            if (string.IsNullOrEmpty(textBox5.Text) || string.IsNullOrEmpty(textBox4.Text) || string.IsNullOrEmpty(textBox3.Text) || string.IsNullOrEmpty(textBox2.Text) || string.IsNullOrEmpty(textBox1.Text) || string.IsNullOrEmpty(textBox6.Text))
+            if (string.IsNullOrEmpty(tbPhonebookName.Text) || string.IsNullOrEmpty(tbPhonebookSurname.Text) || string.IsNullOrEmpty(tbPhonebookNumber.Text) || string.IsNullOrEmpty(tbPhonebookAdress.Text) || string.IsNullOrEmpty(tbPhonebookDescription.Text) || string.IsNullOrEmpty(tbPhonebookEmail.Text))
             {
                 MessageBox.Show("Please fill all the fields.");
                 return false;
             }
 
             //validate each text field using regular expressions
-            if (!System.Text.RegularExpressions.Regex.IsMatch(textBox5.Text, "^[a-zA-Z]+$"))
+            if (!System.Text.RegularExpressions.Regex.IsMatch(tbPhonebookName.Text, "^[a-zA-Z]+$"))
             {
                 MessageBox.Show("Name can only contain letters.");
                 return false;
             }
-            if (!System.Text.RegularExpressions.Regex.IsMatch(textBox4.Text, "^[a-zA-Z]+$"))
+            if (!System.Text.RegularExpressions.Regex.IsMatch(tbPhonebookSurname.Text, "^[a-zA-Z]+$"))
             {
                 MessageBox.Show("Surname can only contain letters.");
                 return false;
             }
-            if (!System.Text.RegularExpressions.Regex.IsMatch(textBox3.Text, @"^(\+[0-9]{1,3})?[0-9]{10}$"))
+            if (!System.Text.RegularExpressions.Regex.IsMatch(tbPhonebookNumber.Text, @"^(\+[0-9]{1,3})?[0-9]{10}$"))
             {
                 MessageBox.Show("Phone number must be 10 digits.");
                 return false;
             }
-            if (!System.Text.RegularExpressions.Regex.IsMatch(textBox6.Text, @"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$"))
+            if (!System.Text.RegularExpressions.Regex.IsMatch(tbPhonebookEmail.Text, @"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$"))
             {
                 MessageBox.Show("Email is not valid.");
                 return false;
@@ -349,12 +366,72 @@ namespace OopLabProje
         }
 
 
-
-
         //Personal Information Start
-        private void tabPage3_Click(object sender, EventArgs e)
+        PersonalInformation currentUserPersonalInformation = new PersonalInformation();
+
+        private void tabControl1_TabIndexChanged(object sender, EventArgs e)
+        {
+            if (tabControl1.SelectedTab == tabPageProfile)
+            {
+                LoadUserInfo();
+            }
+        }
+
+        //Add ctrl-z / ctrl-y functionality to the textboxes
+        private void tbProfileName_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Control && e.KeyCode == Keys.Z)
+            {
+                tbProfileName.Undo();
+            }
+            if (e.Control && e.KeyCode == Keys.Y)
+            {
+                tbProfileName.ClearUndo();
+            }
+        }
+
+        private void btnProfileSave_Click(object sender, EventArgs e)
+        {
+            SaveUserInfo();
+            LoadUserInfo();
+        }
+
+        private void btnProfileCancel_Click(object sender, EventArgs e)
         {
             LoadUserInfo();
+        }
+
+        private void btnProfilePicture_Click(object sender, EventArgs e)
+        {
+            //Ask the user to select a picture from their computer
+            OpenFileDialog dialog = new OpenFileDialog();
+            dialog.Filter = "Image Files|*.jpg;*.jpeg;*.png";
+            dialog.Title = "Select a profile picture";
+            if (dialog.ShowDialog() == DialogResult.OK)
+            {
+                //Load the selected picture into the picturebox
+                pbProfilePicture.Image = new Bitmap(dialog.FileName);
+                currentUserPersonalInformation.ProfilePicture = EncodeImageFromPath(dialog.FileName);
+            }
+        }
+
+        private void btnProfilePassword_Click(object sender, EventArgs e)
+        {
+            //control if the password is correct and the new password is equal to the new password verify
+            //if so, save the new password
+            //if not, show an error message
+            if (LoginForm.currentUser.Password == tbProfileCurrentPassword.Text && tbProfileNewPassword.Text == tbProfilePasswordAgain.Text)
+            {
+                LoginForm.currentUser.Password = tbProfileNewPassword.Text;
+                LoginForm.Instance.SaveUsersToFile();
+                MessageBox.Show("Password Saved");
+            }
+            else
+            {
+                MessageBox.Show("Password is incorrect or new passwords do not match");
+            }
+
+
         }
 
         //Load the current user's information into the textboxes
@@ -362,7 +439,9 @@ namespace OopLabProje
         //load the current user's information from the file by finding the same username
         private void LoadUserInfo()
         {
-            string path = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "OopLabProje", "Users.txt");
+            //The user info should be loaded from a csv file named PersonalInformation.csv and displayed in the textboxes this function should find the current user's info by their username
+            //The file should be in the format of Username,Name,Surname,Email,Phone,Address
+            string path = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "OopLabProje", "PersonalInformation.csv");
             using (StreamReader reader = new StreamReader(path))
             {
                 while (!reader.EndOfStream)
@@ -372,15 +451,154 @@ namespace OopLabProje
 
                     if (columns[0] == LoginForm.currentUser.Username)
                     {
-                        textBox12.Text = columns[3];
-                        textBox11.Text = columns[4];
-                        textBox10.Text = columns[5];
-                        textBox9.Text = columns[6];
-                        textBox7.Text = columns[7];
+
+                        tbProfileName.Text = columns[1];
+                        tbProfileSurname.Text = columns[2];
+                        tbProfileEmail.Text = columns[3];
+                        tbProfilePhone.Text = columns[4];
+                        tbProfileAddress.Text = columns[5];
+
+                        currentUserPersonalInformation.ProfilePicture = columns[6];
+                        pbProfilePicture.Image = LoadImage(currentUserPersonalInformation.ProfilePicture);
+
                     }
                 }
             }
         }
+
+        private void SaveUserInfo()
+        {
+            //Check if the personal information is valid using regular expressions
+            if (!Regex.IsMatch(tbProfileName.Text, @"^[a-zA-Z]+$"))
+            {
+                MessageBox.Show("Name is not valid. Please enter a valid name.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            //Surname
+            if (!Regex.IsMatch(tbProfileSurname.Text, @"^[a-zA-Z]+$"))
+            {
+                MessageBox.Show("Surname is not valid. Please enter a valid surname.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            //Email
+            if (!Regex.IsMatch(tbProfileEmail.Text, @"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$"))
+            {
+                MessageBox.Show("Email is not valid. Please enter a valid email.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            else
+            {
+                //Check if the email is already registered
+                if (users.Any(u => u.PersonalInfo.Email == tbProfileEmail.Text && u != LoginForm.currentUser))
+                {
+                    MessageBox.Show("Email is already registered. Please enter a different email.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+            }
+            //Phone
+            if (!Regex.IsMatch(tbProfilePhone.Text, @"^(\d{10})$"))
+            {
+                MessageBox.Show("Phone number is not valid. Please enter a valid phone number.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            //Address
+            if (!Regex.IsMatch(tbProfileAddress.Text, @"^[a-zA-Z0-9\s,.'-]{3,}$"))
+            {
+                MessageBox.Show("Address is not valid. Please enter a valid address.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+
+
+            //The user info should be saved to a csv file named PersonalInformation.csv in the format of Username,Name,Surname,Email,Phone,Address
+            string path = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "OopLabProje", "PersonalInformation.csv");
+
+            //Cache the PersonalInformation.csv file in a list 
+            List<string> lines = new List<string>();
+            using (StreamReader reader = new StreamReader(path))
+            {
+                lines.Clear();
+                while (!reader.EndOfStream)
+                {
+                    string line = reader.ReadLine();
+                    lines.Add(line);
+                }
+            }
+
+            using (StreamWriter writer = new StreamWriter(path))
+            {
+                bool found = false;
+                for (int i = 0; i < lines.Count; i++)
+                {
+                    string[] columns = lines[i].Split(',');
+                    if (columns[0] == LoginForm.currentUser.Username)
+                    {
+                        //replace the line with the updated information
+                        writer.WriteLine($"{LoginForm.currentUser.Username},{tbProfileName.Text},{tbProfileSurname.Text},{tbProfileEmail.Text},{tbProfilePhone.Text},{tbProfileAddress.Text},{currentUserPersonalInformation.ProfilePicture}");
+                        found = true;
+                    }
+                    else
+                    {
+                        writer.WriteLine(lines[i]);
+                    }
+
+                }
+                if (!found)
+                {
+                    writer.WriteLine($"{LoginForm.currentUser.Username},{tbProfileName.Text},{tbProfileSurname.Text},{tbProfileEmail.Text},{tbProfilePhone.Text},{tbProfileAddress.Text},{currentUserPersonalInformation.ProfilePicture}");
+                }
+
+            }
+        }
+
+        private void btnProfileChangePassword_Click(object sender, EventArgs e)
+        {
+            groupBoxPassword.Visible = true;
+            groupBoxPassword.Enabled = true;
+        }
+
+        private void btnPasswordCancel_Click(object sender, EventArgs e)
+        {
+            //Clear the password textboxes and hide the password groupbox
+            tbProfileCurrentPassword.Clear();
+            tbProfileNewPassword.Clear();
+            tbProfilePasswordAgain.Clear();
+
+            groupBoxPassword.Enabled = false;
+            groupBoxPassword.Visible = false;
+        }
+
+        private Image LoadImage(string base64String)
+        {
+            byte[] bytes = Convert.FromBase64String(base64String);
+
+            Image image;
+            using (MemoryStream ms = new MemoryStream(bytes))
+            {
+                image = Image.FromStream(ms);
+            }
+
+            return image;
+        }
+
+        private string EncodeImageFromPath(string path)
+        {
+            using (Image image = Image.FromFile(path))
+            {
+                using (MemoryStream m = new MemoryStream())
+                {
+                    image.Save(m, image.RawFormat);
+                    byte[] imageBytes = m.ToArray();
+
+                    // Convert byte[] to Base64 String
+                    string base64String = Convert.ToBase64String(imageBytes);
+                    return base64String;
+                }
+            }
+        }
+
+
+
         // akyldrmbyznr codes of notes section
         private void LoadNotesFromFile()     // This method reads the notes from the file and loads them into the notes list in memory.
         {
@@ -866,7 +1084,7 @@ namespace OopLabProje
             if (!uyarıVar) // Eğer hiçbir uyarı gösterilmediyse
             {
                 salary(); // Fonksiyon çağrılır
-                textBox8.Text = labelucret.Text;
+                //textBox8.Text = labelucret.Text; 
             }
 
         }
@@ -920,6 +1138,11 @@ namespace OopLabProje
         {
 
         }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 15dd8ffb97e8deec4c90faf0fcd922eae4cc8ce4
         //fethiyenur salary calculator kısmı bitti
 
         private void listBoxReminders_SelectedIndexChanged(object sender, EventArgs e)
