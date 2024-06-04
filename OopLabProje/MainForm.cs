@@ -7,11 +7,13 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Net;
+using System.Reflection;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static OopLabProje.LoginForm;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace OopLabProje
@@ -919,25 +921,34 @@ namespace OopLabProje
 
         private void comboBoxDil_SelectedIndexChanged(object sender, EventArgs e)
         {
+           
             // Seçilen dil seçeneğine göre katsayı değiştirilir
-                switch (comboBoxDil.SelectedIndex)
+            switch (comboBoxDil.SelectedIndex)
                 {
                 // sıfıncı indexte seçiniz özelliği var 
                     case 1:
+                    checkedListBox1.Visible = false;
+                    label22.Visible = false;
                         DilK = 0.20;
                         break;
                     case 2:
+                    checkedListBox1.Visible = false;
+                    label22.Visible = false;
                         DilK = 0.20;
                         break;
                     case 3:
-                        DilK = 0.05;
-                        break;
+                        checkedListBox1.Visible = true;
+                    label22.Visible = true;
+                    break;
                     default:
                         break;
                 
             }
         }
-
+       public void dilkAl()
+        {
+            
+        }
         private void comboBoxYonetici_SelectedIndexChanged(object sender, EventArgs e)
         {
                 // yöneticilik görevi için seçilen seçeneğe göre katsayı değiştirilir
@@ -1024,6 +1035,7 @@ namespace OopLabProje
             ucret *= calismaTuru;
             //labela salary yazdırılır
             labelucret.Text=ucret.ToString()+" TL";
+            textBoxSalary.Text=ucret.ToString()+" TL"; 
         }
 
         private void tabPage4_Click(object sender, EventArgs e)
@@ -1040,6 +1052,7 @@ namespace OopLabProje
                 MessageBox.Show("Lütfen aile durumu için bir seçim yapın!", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 uyarıVar = true; // En az bir uyarı gösterildi
                 labelucret.Text = "  ";
+                textBoxSalary.Text = "-TL";
             }
 
             if (comboBox1.SelectedIndex == 0 && comboBox1.Visible == true)
@@ -1047,6 +1060,7 @@ namespace OopLabProje
                 MessageBox.Show("Lütfen çalışma durumu için bir seçim yapın!", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 uyarıVar = true; // En az bir uyarı gösterildi
                 labelucret.Text = "  ";
+                textBoxSalary.Text = "-TL";
             }
 
             if (comboBoxDeneyim.SelectedIndex == 0 && comboBoxDeneyim.Visible == true)
@@ -1054,6 +1068,7 @@ namespace OopLabProje
                 MessageBox.Show("Lütfen deneyim için bir seçim yapın!", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 uyarıVar = true; // En az bir uyarı gösterildi
                 labelucret.Text = "  ";
+                textBoxSalary.Text = "-TL";
             }
 
             if (comboBoxDil.SelectedIndex == 0 && comboBoxDil.Visible == true)
@@ -1061,6 +1076,7 @@ namespace OopLabProje
                 MessageBox.Show("Lütfen yabancı dil için bir seçim yapın!", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 uyarıVar = true; // En az bir uyarı gösterildi
                 labelucret.Text = "  ";
+                textBoxSalary.Text = "-TL";
             }
 
             if (comboBoxIl.SelectedIndex == 0 && comboBoxIl.Visible == true)
@@ -1068,6 +1084,7 @@ namespace OopLabProje
                 MessageBox.Show("Lütfen yaşanılan il için bir seçim yapın!", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 uyarıVar = true; // En az bir uyarı gösterildi
                 labelucret.Text = "  ";
+                textBoxSalary.Text = "-TL";
             }
 
             if (comboBoxUstOgr.SelectedIndex == 0 && comboBoxUstOgr.Visible == true)
@@ -1075,6 +1092,7 @@ namespace OopLabProje
                 MessageBox.Show("Lütfen üst öğrenim için bir seçim yapın!", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 uyarıVar = true; // En az bir uyarı gösterildi
                 labelucret.Text = "  ";
+                textBoxSalary.Text = "-TL";
             }
 
             if (comboBoxYonetici.SelectedIndex == 0 && comboBoxYonetici.Visible == true)
@@ -1082,6 +1100,14 @@ namespace OopLabProje
                 MessageBox.Show("Lütfen yönetici görevi için bir seçim yapın!", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 uyarıVar = true; // En az bir uyarı gösterildi
                 labelucret.Text = "  ";
+                textBoxSalary.Text = "-TL";
+            }
+            if (checkedListBox1.CheckedItems.Count == 0&&checkedListBox1.Visible==true)
+            {
+                MessageBox.Show("Lütfen yabancı dil seçiniz!", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                uyarıVar = true; // En az bir uyarı gösterildi
+                labelucret.Text = "  ";
+                textBoxSalary.Text = "-TL";
             }
 
             if (!uyarıVar) // Eğer hiçbir uyarı gösterilmediyse
@@ -1157,7 +1183,11 @@ namespace OopLabProje
 
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
         {
-
+            if (radioButton2 != null) { 
+                comboBoxDeneyim.Visible = false;
+                comboBoxDeneyim.SelectedIndex = 0;
+                deneyimK = 0;
+                    }
         }
 
         private void groupBox3_Enter(object sender, EventArgs e)
@@ -1306,9 +1336,61 @@ namespace OopLabProje
             }
             this.Left = (Screen.PrimaryScreen.WorkingArea.Width - this.Width) / 2;
         }
-
-
         // akyldrmbyznr The codes for the reminder section are finished.
+
+        //sonradan eklenen salary değişiklikleri
+        private void radioButtonUstHayir_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radioButtonUstHayir != null) { 
+                comboBoxUstOgr.Visible = false;
+                comboBoxUstOgr.SelectedIndex = 0;
+                ustK = 0;
+            }
+        }
+
+        private void radioButtonYonetHayir_CheckedChanged(object sender, EventArgs e)
+        {
+            if(radioButtonYonetHayir != null) { 
+                comboBoxYonetici.Visible = false;
+                comboBoxYonetici.SelectedIndex = 0;
+                YonetK = 0;
+
+            }
+        }
+
+        private void radioButtonDilYok_CheckedChanged(object sender, EventArgs e)
+        {
+            if( radioButtonDilYok != null) {
+                comboBoxDil.Visible = false;
+                comboBoxDil.SelectedIndex = 0;
+                checkedListBox1.Visible = false;
+                label22.Visible = false;
+                DilK = 0;
+            }
+        }
+
+        private void radioButtonBekar_CheckedChanged(object sender, EventArgs e)
+        {
+            if(radioButtonBekar != null) {
+                comboBoxAile.Visible = false;
+                comboBoxAile.SelectedIndex = 0;
+                AileK = 0;
+            }
+        }
+
+        private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int selectedCount = checkedListBox1.CheckedItems.Count +1;
+            if (checkedListBox1.SelectedIndex == 3) {
+                selectedCount--;
+                DilK = selectedCount * 0.05;
+                DilK += 0.20;
+                
+            }
+            else { DilK = selectedCount * 0.05; }
+            
+            
+        }
     }
     public class Reminder
     {

@@ -128,6 +128,10 @@
             this.textBoxReminderDescription = new System.Windows.Forms.TextBox();
             this.listBoxReminders = new System.Windows.Forms.ListBox();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
+            this.textBoxSalary = new System.Windows.Forms.TextBox();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPagePhonebook.SuspendLayout();
             this.tabPageProfile.SuspendLayout();
@@ -349,6 +353,8 @@
             // 
             // tabPageProfile
             // 
+            this.tabPageProfile.Controls.Add(this.label21);
+            this.tabPageProfile.Controls.Add(this.textBoxSalary);
             this.tabPageProfile.Controls.Add(this.groupBoxPassword);
             this.tabPageProfile.Controls.Add(this.btnProfileChangePassword);
             this.tabPageProfile.Controls.Add(this.btnProfileCancel);
@@ -771,6 +777,8 @@
             // 
             // tabPageSalaryCalculator
             // 
+            this.tabPageSalaryCalculator.Controls.Add(this.label22);
+            this.tabPageSalaryCalculator.Controls.Add(this.checkedListBox1);
             this.tabPageSalaryCalculator.Controls.Add(this.groupBox6);
             this.tabPageSalaryCalculator.Controls.Add(this.groupBox5);
             this.tabPageSalaryCalculator.Controls.Add(this.groupBox4);
@@ -810,7 +818,6 @@
             this.radioButtonYonetEvet.Name = "radioButtonYonetEvet";
             this.radioButtonYonetEvet.Size = new System.Drawing.Size(55, 20);
             this.radioButtonYonetEvet.TabIndex = 18;
-            this.radioButtonYonetEvet.TabStop = true;
             this.radioButtonYonetEvet.Text = "Evet";
             this.radioButtonYonetEvet.UseVisualStyleBackColor = true;
             this.radioButtonYonetEvet.CheckedChanged += new System.EventHandler(this.radioButtonYonetEvet_CheckedChanged);
@@ -818,6 +825,7 @@
             // radioButtonYonetHayir
             // 
             this.radioButtonYonetHayir.AutoSize = true;
+            this.radioButtonYonetHayir.Checked = true;
             this.radioButtonYonetHayir.Location = new System.Drawing.Point(129, 37);
             this.radioButtonYonetHayir.Name = "radioButtonYonetHayir";
             this.radioButtonYonetHayir.Size = new System.Drawing.Size(60, 20);
@@ -825,6 +833,7 @@
             this.radioButtonYonetHayir.TabStop = true;
             this.radioButtonYonetHayir.Text = "Hayır";
             this.radioButtonYonetHayir.UseVisualStyleBackColor = true;
+            this.radioButtonYonetHayir.CheckedChanged += new System.EventHandler(this.radioButtonYonetHayir_CheckedChanged);
             // 
             // comboBoxYonetici
             // 
@@ -866,6 +875,7 @@
             // radioButtonUstHayir
             // 
             this.radioButtonUstHayir.AutoSize = true;
+            this.radioButtonUstHayir.Checked = true;
             this.radioButtonUstHayir.Location = new System.Drawing.Point(129, 27);
             this.radioButtonUstHayir.Name = "radioButtonUstHayir";
             this.radioButtonUstHayir.Size = new System.Drawing.Size(60, 20);
@@ -873,6 +883,7 @@
             this.radioButtonUstHayir.TabStop = true;
             this.radioButtonUstHayir.Text = "Hayır";
             this.radioButtonUstHayir.UseVisualStyleBackColor = true;
+            this.radioButtonUstHayir.CheckedChanged += new System.EventHandler(this.radioButtonUstHayir_CheckedChanged);
             // 
             // radioButtonUstEvet
             // 
@@ -881,7 +892,6 @@
             this.radioButtonUstEvet.Name = "radioButtonUstEvet";
             this.radioButtonUstEvet.Size = new System.Drawing.Size(55, 20);
             this.radioButtonUstEvet.TabIndex = 16;
-            this.radioButtonUstEvet.TabStop = true;
             this.radioButtonUstEvet.Text = "Evet";
             this.radioButtonUstEvet.UseVisualStyleBackColor = true;
             this.radioButtonUstEvet.CheckedChanged += new System.EventHandler(this.radioButtonUstEvet_CheckedChanged);
@@ -924,7 +934,6 @@
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(49, 20);
             this.radioButton1.TabIndex = 14;
-            this.radioButton1.TabStop = true;
             this.radioButton1.Text = "Var";
             this.radioButton1.UseVisualStyleBackColor = true;
             this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
@@ -932,6 +941,7 @@
             // radioButton2
             // 
             this.radioButton2.AutoSize = true;
+            this.radioButton2.Checked = true;
             this.radioButton2.Location = new System.Drawing.Point(129, 24);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(52, 20);
@@ -1080,6 +1090,7 @@
             // radioButtonBekar
             // 
             this.radioButtonBekar.AutoSize = true;
+            this.radioButtonBekar.Checked = true;
             this.radioButtonBekar.Location = new System.Drawing.Point(9, 31);
             this.radioButtonBekar.Name = "radioButtonBekar";
             this.radioButtonBekar.Size = new System.Drawing.Size(64, 20);
@@ -1087,6 +1098,7 @@
             this.radioButtonBekar.TabStop = true;
             this.radioButtonBekar.Text = "Bekar";
             this.radioButtonBekar.UseVisualStyleBackColor = true;
+            this.radioButtonBekar.CheckedChanged += new System.EventHandler(this.radioButtonBekar_CheckedChanged);
             // 
             // radioButtonEvli
             // 
@@ -1095,7 +1107,6 @@
             this.radioButtonEvli.Name = "radioButtonEvli";
             this.radioButtonEvli.Size = new System.Drawing.Size(50, 20);
             this.radioButtonEvli.TabIndex = 23;
-            this.radioButtonEvli.TabStop = true;
             this.radioButtonEvli.Text = "Evli";
             this.radioButtonEvli.UseVisualStyleBackColor = true;
             this.radioButtonEvli.CheckedChanged += new System.EventHandler(this.radioButtonEvli_CheckedChanged);
@@ -1138,7 +1149,7 @@
             "Seçiniz",
             "Belgelendirilmiş İngilizce bilgisi ",
             "İngilizce eğitim veren okul mezuniyeti ",
-            "Belgelendirilmiş diğer yabancı dil bilgisi (her dil için) "});
+            "Belgelendirilmiş birden fazla yabancı dil bilgisi"});
             this.comboBoxDil.Location = new System.Drawing.Point(9, 53);
             this.comboBoxDil.Name = "comboBoxDil";
             this.comboBoxDil.Size = new System.Drawing.Size(257, 24);
@@ -1154,7 +1165,6 @@
             this.radioButtonDilVar.Name = "radioButtonDilVar";
             this.radioButtonDilVar.Size = new System.Drawing.Size(49, 20);
             this.radioButtonDilVar.TabIndex = 20;
-            this.radioButtonDilVar.TabStop = true;
             this.radioButtonDilVar.Text = "Var";
             this.radioButtonDilVar.UseVisualStyleBackColor = true;
             this.radioButtonDilVar.CheckedChanged += new System.EventHandler(this.radioButtonDilVar_CheckedChanged);
@@ -1162,6 +1172,7 @@
             // radioButtonDilYok
             // 
             this.radioButtonDilYok.AutoSize = true;
+            this.radioButtonDilYok.Checked = true;
             this.radioButtonDilYok.Location = new System.Drawing.Point(132, 27);
             this.radioButtonDilYok.Name = "radioButtonDilYok";
             this.radioButtonDilYok.Size = new System.Drawing.Size(52, 20);
@@ -1169,6 +1180,7 @@
             this.radioButtonDilYok.TabStop = true;
             this.radioButtonDilYok.Text = "Yok";
             this.radioButtonDilYok.UseVisualStyleBackColor = true;
+            this.radioButtonDilYok.CheckedChanged += new System.EventHandler(this.radioButtonDilYok_CheckedChanged);
             // 
             // comboBox1
             // 
@@ -1355,6 +1367,51 @@
             this.listBoxReminders.TabIndex = 0;
             this.listBoxReminders.SelectedIndexChanged += new System.EventHandler(this.listBoxReminders_SelectedIndexChanged);
             // 
+            // checkedListBox1
+            // 
+            this.checkedListBox1.FormattingEnabled = true;
+            this.checkedListBox1.Items.AddRange(new object[] {
+            "Almanca",
+            "Çince",
+            "Fransızca",
+            "İngilizce",
+            "Japonca",
+            "Korece",
+            "Rusça"});
+            this.checkedListBox1.Location = new System.Drawing.Point(644, 169);
+            this.checkedListBox1.Name = "checkedListBox1";
+            this.checkedListBox1.Size = new System.Drawing.Size(120, 140);
+            this.checkedListBox1.TabIndex = 33;
+            this.checkedListBox1.Visible = false;
+            this.checkedListBox1.SelectedIndexChanged += new System.EventHandler(this.checkedListBox1_SelectedIndexChanged);
+            // 
+            // textBoxSalary
+            // 
+            this.textBoxSalary.Location = new System.Drawing.Point(239, 357);
+            this.textBoxSalary.Name = "textBoxSalary";
+            this.textBoxSalary.Size = new System.Drawing.Size(100, 22);
+            this.textBoxSalary.TabIndex = 73;
+            this.textBoxSalary.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(170, 363);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(49, 16);
+            this.label21.TabIndex = 74;
+            this.label21.Text = "Salary:";
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(641, 150);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(98, 16);
+            this.label22.TabIndex = 34;
+            this.label22.Text = "Dil(ler)i Seçiniz:";
+            this.label22.Visible = false;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1499,5 +1556,9 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.CheckedListBox checkedListBox1;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.TextBox textBoxSalary;
+        private System.Windows.Forms.Label label22;
     }
 }
