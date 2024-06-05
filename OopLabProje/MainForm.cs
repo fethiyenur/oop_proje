@@ -945,10 +945,7 @@ namespace OopLabProje
                 
             }
         }
-       public void dilkAl()
-        {
-            
-        }
+       
         private void comboBoxYonetici_SelectedIndexChanged(object sender, EventArgs e)
         {
                 // yöneticilik görevi için seçilen seçeneğe göre katsayı değiştirilir
@@ -1109,7 +1106,41 @@ namespace OopLabProje
                 labelucret.Text = "  ";
                 textBoxSalary.Text = "-TL";
             }
-
+            if (radioButton1.Checked == false && radioButton2.Checked == false) {
+                MessageBox.Show("Lütfen deneyim için seçim yapınız!", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                uyarıVar = true; // En az bir uyarı gösterildi
+                labelucret.Text = "  ";
+                textBoxSalary.Text = "-TL";
+            }
+            if (radioButtonUstEvet.Checked == false && radioButtonUstHayir.Checked == false)
+            {
+                MessageBox.Show("Lütfen üst öğrenim için seçim yapınız!", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                uyarıVar = true; // En az bir uyarı gösterildi
+                labelucret.Text = "  ";
+                textBoxSalary.Text = "-TL";
+            }
+            if (radioButtonDilVar.Checked == false && radioButtonDilYok.Checked == false)
+            {
+                MessageBox.Show("Lütfen yabancı dil için seçim yapınız!", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                uyarıVar = true; // En az bir uyarı gösterildi
+                labelucret.Text = "  ";
+                textBoxSalary.Text = "-TL";
+            }
+            
+            if(radioButtonYonetEvet.Checked==false &&radioButtonYonetHayir.Checked == false)
+            {
+                MessageBox.Show("Lütfen yöneticilik görevi için seçim yapınız!", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                uyarıVar = true; // En az bir uyarı gösterildi
+                labelucret.Text = "  ";
+                textBoxSalary.Text = "-TL";
+            }
+            if (radioButtonBekar.Checked == false && radioButtonEvli.Checked == false)
+            {
+                MessageBox.Show("Lütfen aile durumu için seçim yapınız!", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                uyarıVar = true; // En az bir uyarı gösterildi
+                labelucret.Text = "  ";
+                textBoxSalary.Text = "-TL";
+            }
             if (!uyarıVar) // Eğer hiçbir uyarı gösterilmediyse
             {
                 salary(); // Fonksiyon çağrılır

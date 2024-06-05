@@ -48,6 +48,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.tabPageProfile = new System.Windows.Forms.TabPage();
+            this.label21 = new System.Windows.Forms.Label();
+            this.textBoxSalary = new System.Windows.Forms.TextBox();
             this.groupBoxPassword = new System.Windows.Forms.GroupBox();
             this.btnPasswordCancel = new System.Windows.Forms.Button();
             this.label15 = new System.Windows.Forms.Label();
@@ -87,6 +89,8 @@
             this.btnDeleteNote = new System.Windows.Forms.Button();
             this.btnUpdateNote = new System.Windows.Forms.Button();
             this.tabPageSalaryCalculator = new System.Windows.Forms.TabPage();
+            this.label22 = new System.Windows.Forms.Label();
+            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.radioButtonYonetEvet = new System.Windows.Forms.RadioButton();
             this.radioButtonYonetHayir = new System.Windows.Forms.RadioButton();
@@ -128,10 +132,6 @@
             this.textBoxReminderDescription = new System.Windows.Forms.TextBox();
             this.listBoxReminders = new System.Windows.Forms.ListBox();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
-            this.textBoxSalary = new System.Windows.Forms.TextBox();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPagePhonebook.SuspendLayout();
             this.tabPageProfile.SuspendLayout();
@@ -379,6 +379,23 @@
             this.tabPageProfile.Text = "Profile";
             this.tabPageProfile.UseVisualStyleBackColor = true;
             // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(170, 363);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(49, 16);
+            this.label21.TabIndex = 74;
+            this.label21.Text = "Salary:";
+            // 
+            // textBoxSalary
+            // 
+            this.textBoxSalary.Location = new System.Drawing.Point(239, 357);
+            this.textBoxSalary.Name = "textBoxSalary";
+            this.textBoxSalary.Size = new System.Drawing.Size(100, 22);
+            this.textBoxSalary.TabIndex = 73;
+            this.textBoxSalary.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
             // groupBoxPassword
             // 
             this.groupBoxPassword.Controls.Add(this.btnPasswordCancel);
@@ -603,6 +620,7 @@
             // 
             // pbProfilePicture
             // 
+            this.pbProfilePicture.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pbProfilePicture.Location = new System.Drawing.Point(43, 24);
             this.pbProfilePicture.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pbProfilePicture.Name = "pbProfilePicture";
@@ -799,6 +817,34 @@
             this.tabPageSalaryCalculator.Click += new System.EventHandler(this.tabPage4_Click);
             this.tabPageSalaryCalculator.Enter += new System.EventHandler(this.tabPage4_Enter);
             // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(641, 150);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(98, 16);
+            this.label22.TabIndex = 34;
+            this.label22.Text = "Dil(ler)i Seçiniz:";
+            this.label22.Visible = false;
+            // 
+            // checkedListBox1
+            // 
+            this.checkedListBox1.FormattingEnabled = true;
+            this.checkedListBox1.Items.AddRange(new object[] {
+            "Almanca",
+            "Çince",
+            "Fransızca",
+            "İngilizce",
+            "Japonca",
+            "Korece",
+            "Rusça"});
+            this.checkedListBox1.Location = new System.Drawing.Point(644, 169);
+            this.checkedListBox1.Name = "checkedListBox1";
+            this.checkedListBox1.Size = new System.Drawing.Size(120, 140);
+            this.checkedListBox1.TabIndex = 33;
+            this.checkedListBox1.Visible = false;
+            this.checkedListBox1.SelectedIndexChanged += new System.EventHandler(this.checkedListBox1_SelectedIndexChanged);
+            // 
             // groupBox6
             // 
             this.groupBox6.Controls.Add(this.radioButtonYonetEvet);
@@ -825,12 +871,10 @@
             // radioButtonYonetHayir
             // 
             this.radioButtonYonetHayir.AutoSize = true;
-            this.radioButtonYonetHayir.Checked = true;
             this.radioButtonYonetHayir.Location = new System.Drawing.Point(129, 37);
             this.radioButtonYonetHayir.Name = "radioButtonYonetHayir";
             this.radioButtonYonetHayir.Size = new System.Drawing.Size(60, 20);
             this.radioButtonYonetHayir.TabIndex = 19;
-            this.radioButtonYonetHayir.TabStop = true;
             this.radioButtonYonetHayir.Text = "Hayır";
             this.radioButtonYonetHayir.UseVisualStyleBackColor = true;
             this.radioButtonYonetHayir.CheckedChanged += new System.EventHandler(this.radioButtonYonetHayir_CheckedChanged);
@@ -875,12 +919,10 @@
             // radioButtonUstHayir
             // 
             this.radioButtonUstHayir.AutoSize = true;
-            this.radioButtonUstHayir.Checked = true;
             this.radioButtonUstHayir.Location = new System.Drawing.Point(129, 27);
             this.radioButtonUstHayir.Name = "radioButtonUstHayir";
             this.radioButtonUstHayir.Size = new System.Drawing.Size(60, 20);
             this.radioButtonUstHayir.TabIndex = 17;
-            this.radioButtonUstHayir.TabStop = true;
             this.radioButtonUstHayir.Text = "Hayır";
             this.radioButtonUstHayir.UseVisualStyleBackColor = true;
             this.radioButtonUstHayir.CheckedChanged += new System.EventHandler(this.radioButtonUstHayir_CheckedChanged);
@@ -941,12 +983,10 @@
             // radioButton2
             // 
             this.radioButton2.AutoSize = true;
-            this.radioButton2.Checked = true;
             this.radioButton2.Location = new System.Drawing.Point(129, 24);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(52, 20);
             this.radioButton2.TabIndex = 15;
-            this.radioButton2.TabStop = true;
             this.radioButton2.Text = "Yok";
             this.radioButton2.UseVisualStyleBackColor = true;
             this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
@@ -1090,12 +1130,10 @@
             // radioButtonBekar
             // 
             this.radioButtonBekar.AutoSize = true;
-            this.radioButtonBekar.Checked = true;
             this.radioButtonBekar.Location = new System.Drawing.Point(9, 31);
             this.radioButtonBekar.Name = "radioButtonBekar";
             this.radioButtonBekar.Size = new System.Drawing.Size(64, 20);
             this.radioButtonBekar.TabIndex = 22;
-            this.radioButtonBekar.TabStop = true;
             this.radioButtonBekar.Text = "Bekar";
             this.radioButtonBekar.UseVisualStyleBackColor = true;
             this.radioButtonBekar.CheckedChanged += new System.EventHandler(this.radioButtonBekar_CheckedChanged);
@@ -1172,12 +1210,10 @@
             // radioButtonDilYok
             // 
             this.radioButtonDilYok.AutoSize = true;
-            this.radioButtonDilYok.Checked = true;
             this.radioButtonDilYok.Location = new System.Drawing.Point(132, 27);
             this.radioButtonDilYok.Name = "radioButtonDilYok";
             this.radioButtonDilYok.Size = new System.Drawing.Size(52, 20);
             this.radioButtonDilYok.TabIndex = 21;
-            this.radioButtonDilYok.TabStop = true;
             this.radioButtonDilYok.Text = "Yok";
             this.radioButtonDilYok.UseVisualStyleBackColor = true;
             this.radioButtonDilYok.CheckedChanged += new System.EventHandler(this.radioButtonDilYok_CheckedChanged);
@@ -1366,51 +1402,6 @@
             this.listBoxReminders.Size = new System.Drawing.Size(441, 372);
             this.listBoxReminders.TabIndex = 0;
             this.listBoxReminders.SelectedIndexChanged += new System.EventHandler(this.listBoxReminders_SelectedIndexChanged);
-            // 
-            // checkedListBox1
-            // 
-            this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.Items.AddRange(new object[] {
-            "Almanca",
-            "Çince",
-            "Fransızca",
-            "İngilizce",
-            "Japonca",
-            "Korece",
-            "Rusça"});
-            this.checkedListBox1.Location = new System.Drawing.Point(644, 169);
-            this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(120, 140);
-            this.checkedListBox1.TabIndex = 33;
-            this.checkedListBox1.Visible = false;
-            this.checkedListBox1.SelectedIndexChanged += new System.EventHandler(this.checkedListBox1_SelectedIndexChanged);
-            // 
-            // textBoxSalary
-            // 
-            this.textBoxSalary.Location = new System.Drawing.Point(239, 357);
-            this.textBoxSalary.Name = "textBoxSalary";
-            this.textBoxSalary.Size = new System.Drawing.Size(100, 22);
-            this.textBoxSalary.TabIndex = 73;
-            this.textBoxSalary.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(170, 363);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(49, 16);
-            this.label21.TabIndex = 74;
-            this.label21.Text = "Salary:";
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(641, 150);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(98, 16);
-            this.label22.TabIndex = 34;
-            this.label22.Text = "Dil(ler)i Seçiniz:";
-            this.label22.Visible = false;
             // 
             // MainForm
             // 
