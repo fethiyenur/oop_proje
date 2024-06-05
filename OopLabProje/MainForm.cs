@@ -44,7 +44,7 @@ namespace OopLabProje
             contacts = new List<Contact>();
 
             CheckSaveDirectory();
-            string path = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "OopLabProje", "Contacts.txt");
+            string path = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "OopLabProje", "Contacts.csv");
             LoadContactsFromFile(path);
 
             //Notes 
